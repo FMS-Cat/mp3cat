@@ -1,5 +1,5 @@
 {
-  "name": "mp3-server",
+  "name": "mp3cat",
   "version": "1.0.0",
   "description": "",
   "main": "node/index.js",

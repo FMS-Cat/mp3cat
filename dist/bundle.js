@@ -1,28 +1,28 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/babel-runtime/core-js/json/stringify.js":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/babel-runtime/core-js/json/stringify.js":[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/json/stringify"), __esModule: true };
-},{"core-js/library/fn/json/stringify":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/fn/json/stringify.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/babel-runtime/core-js/object/assign.js":[function(require,module,exports){
+},{"core-js/library/fn/json/stringify":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/fn/json/stringify.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/babel-runtime/core-js/object/assign.js":[function(require,module,exports){
 module.exports = { "default": require("core-js/library/fn/object/assign"), __esModule: true };
-},{"core-js/library/fn/object/assign":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/fn/object/assign.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/fn/json/stringify.js":[function(require,module,exports){
+},{"core-js/library/fn/object/assign":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/fn/object/assign.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/fn/json/stringify.js":[function(require,module,exports){
 var core  = require('../../modules/_core')
   , $JSON = core.JSON || (core.JSON = {stringify: JSON.stringify});
 module.exports = function stringify(it){ // eslint-disable-line no-unused-vars
   return $JSON.stringify.apply($JSON, arguments);
 };
-},{"../../modules/_core":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_core.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/fn/object/assign.js":[function(require,module,exports){
+},{"../../modules/_core":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_core.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/fn/object/assign.js":[function(require,module,exports){
 require('../../modules/es6.object.assign');
 module.exports = require('../../modules/_core').Object.assign;
-},{"../../modules/_core":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_core.js","../../modules/es6.object.assign":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/es6.object.assign.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_a-function.js":[function(require,module,exports){
+},{"../../modules/_core":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_core.js","../../modules/es6.object.assign":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/es6.object.assign.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_a-function.js":[function(require,module,exports){
 module.exports = function(it){
   if(typeof it != 'function')throw TypeError(it + ' is not a function!');
   return it;
 };
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_an-object.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_an-object.js":[function(require,module,exports){
 var isObject = require('./_is-object');
 module.exports = function(it){
   if(!isObject(it))throw TypeError(it + ' is not an object!');
   return it;
 };
-},{"./_is-object":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_is-object.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_array-includes.js":[function(require,module,exports){
+},{"./_is-object":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_is-object.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_array-includes.js":[function(require,module,exports){
 // false -> Array#indexOf
 // true  -> Array#includes
 var toIObject = require('./_to-iobject')
@@ -44,16 +44,16 @@ module.exports = function(IS_INCLUDES){
     } return !IS_INCLUDES && -1;
   };
 };
-},{"./_to-index":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-index.js","./_to-iobject":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-iobject.js","./_to-length":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-length.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_cof.js":[function(require,module,exports){
+},{"./_to-index":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-index.js","./_to-iobject":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-iobject.js","./_to-length":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-length.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_cof.js":[function(require,module,exports){
 var toString = {}.toString;
 
 module.exports = function(it){
   return toString.call(it).slice(8, -1);
 };
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_core.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_core.js":[function(require,module,exports){
 var core = module.exports = {version: '2.4.0'};
 if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_ctx.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_ctx.js":[function(require,module,exports){
 // optional / simple context binding
 var aFunction = require('./_a-function');
 module.exports = function(fn, that, length){
@@ -74,18 +74,18 @@ module.exports = function(fn, that, length){
     return fn.apply(that, arguments);
   };
 };
-},{"./_a-function":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_a-function.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_defined.js":[function(require,module,exports){
+},{"./_a-function":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_a-function.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_defined.js":[function(require,module,exports){
 // 7.2.1 RequireObjectCoercible(argument)
 module.exports = function(it){
   if(it == undefined)throw TypeError("Can't call method on  " + it);
   return it;
 };
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_descriptors.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_descriptors.js":[function(require,module,exports){
 // Thank's IE8 for his funny defineProperty
 module.exports = !require('./_fails')(function(){
   return Object.defineProperty({}, 'a', {get: function(){ return 7; }}).a != 7;
 });
-},{"./_fails":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_fails.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_dom-create.js":[function(require,module,exports){
+},{"./_fails":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_fails.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_dom-create.js":[function(require,module,exports){
 var isObject = require('./_is-object')
   , document = require('./_global').document
   // in old IE typeof document.createElement is 'object'
@@ -93,12 +93,12 @@ var isObject = require('./_is-object')
 module.exports = function(it){
   return is ? document.createElement(it) : {};
 };
-},{"./_global":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_global.js","./_is-object":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_is-object.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_enum-bug-keys.js":[function(require,module,exports){
+},{"./_global":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_global.js","./_is-object":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_is-object.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_enum-bug-keys.js":[function(require,module,exports){
 // IE 8- don't enum bug keys
 module.exports = (
   'constructor,hasOwnProperty,isPrototypeOf,propertyIsEnumerable,toLocaleString,toString,valueOf'
 ).split(',');
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_export.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_export.js":[function(require,module,exports){
 var global    = require('./_global')
   , core      = require('./_core')
   , ctx       = require('./_ctx')
@@ -160,7 +160,7 @@ $export.W = 32;  // wrap
 $export.U = 64;  // safe
 $export.R = 128; // real proto method for `library` 
 module.exports = $export;
-},{"./_core":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_core.js","./_ctx":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_ctx.js","./_global":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_global.js","./_hide":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_hide.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_fails.js":[function(require,module,exports){
+},{"./_core":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_core.js","./_ctx":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_ctx.js","./_global":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_global.js","./_hide":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_hide.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_fails.js":[function(require,module,exports){
 module.exports = function(exec){
   try {
     return !!exec();
@@ -168,17 +168,17 @@ module.exports = function(exec){
     return true;
   }
 };
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_global.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_global.js":[function(require,module,exports){
 // https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
 var global = module.exports = typeof window != 'undefined' && window.Math == Math
   ? window : typeof self != 'undefined' && self.Math == Math ? self : Function('return this')();
 if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_has.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_has.js":[function(require,module,exports){
 var hasOwnProperty = {}.hasOwnProperty;
 module.exports = function(it, key){
   return hasOwnProperty.call(it, key);
 };
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_hide.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_hide.js":[function(require,module,exports){
 var dP         = require('./_object-dp')
   , createDesc = require('./_property-desc');
 module.exports = require('./_descriptors') ? function(object, key, value){
@@ -187,21 +187,21 @@ module.exports = require('./_descriptors') ? function(object, key, value){
   object[key] = value;
   return object;
 };
-},{"./_descriptors":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_descriptors.js","./_object-dp":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-dp.js","./_property-desc":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_property-desc.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_ie8-dom-define.js":[function(require,module,exports){
+},{"./_descriptors":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_descriptors.js","./_object-dp":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-dp.js","./_property-desc":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_property-desc.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_ie8-dom-define.js":[function(require,module,exports){
 module.exports = !require('./_descriptors') && !require('./_fails')(function(){
   return Object.defineProperty(require('./_dom-create')('div'), 'a', {get: function(){ return 7; }}).a != 7;
 });
-},{"./_descriptors":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_descriptors.js","./_dom-create":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_dom-create.js","./_fails":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_fails.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_iobject.js":[function(require,module,exports){
+},{"./_descriptors":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_descriptors.js","./_dom-create":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_dom-create.js","./_fails":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_fails.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_iobject.js":[function(require,module,exports){
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
 var cof = require('./_cof');
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function(it){
   return cof(it) == 'String' ? it.split('') : Object(it);
 };
-},{"./_cof":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_cof.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_is-object.js":[function(require,module,exports){
+},{"./_cof":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_cof.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_is-object.js":[function(require,module,exports){
 module.exports = function(it){
   return typeof it === 'object' ? it !== null : typeof it === 'function';
 };
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-assign.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-assign.js":[function(require,module,exports){
 'use strict';
 // 19.1.2.1 Object.assign(target, source, ...)
 var getKeys  = require('./_object-keys')
@@ -235,7 +235,7 @@ module.exports = !$assign || require('./_fails')(function(){
     while(length > j)if(isEnum.call(S, key = keys[j++]))T[key] = S[key];
   } return T;
 } : $assign;
-},{"./_fails":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_fails.js","./_iobject":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_iobject.js","./_object-gops":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-gops.js","./_object-keys":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-keys.js","./_object-pie":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-pie.js","./_to-object":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-object.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-dp.js":[function(require,module,exports){
+},{"./_fails":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_fails.js","./_iobject":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_iobject.js","./_object-gops":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-gops.js","./_object-keys":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-keys.js","./_object-pie":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-pie.js","./_to-object":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-object.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-dp.js":[function(require,module,exports){
 var anObject       = require('./_an-object')
   , IE8_DOM_DEFINE = require('./_ie8-dom-define')
   , toPrimitive    = require('./_to-primitive')
@@ -252,9 +252,9 @@ exports.f = require('./_descriptors') ? Object.defineProperty : function defineP
   if('value' in Attributes)O[P] = Attributes.value;
   return O;
 };
-},{"./_an-object":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_an-object.js","./_descriptors":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_descriptors.js","./_ie8-dom-define":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_ie8-dom-define.js","./_to-primitive":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-primitive.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-gops.js":[function(require,module,exports){
+},{"./_an-object":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_an-object.js","./_descriptors":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_descriptors.js","./_ie8-dom-define":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_ie8-dom-define.js","./_to-primitive":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-primitive.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-gops.js":[function(require,module,exports){
 exports.f = Object.getOwnPropertySymbols;
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-keys-internal.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-keys-internal.js":[function(require,module,exports){
 var has          = require('./_has')
   , toIObject    = require('./_to-iobject')
   , arrayIndexOf = require('./_array-includes')(false)
@@ -272,7 +272,7 @@ module.exports = function(object, names){
   }
   return result;
 };
-},{"./_array-includes":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_array-includes.js","./_has":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_has.js","./_shared-key":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_shared-key.js","./_to-iobject":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-iobject.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-keys.js":[function(require,module,exports){
+},{"./_array-includes":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_array-includes.js","./_has":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_has.js","./_shared-key":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_shared-key.js","./_to-iobject":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-iobject.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-keys.js":[function(require,module,exports){
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
 var $keys       = require('./_object-keys-internal')
   , enumBugKeys = require('./_enum-bug-keys');
@@ -280,9 +280,9 @@ var $keys       = require('./_object-keys-internal')
 module.exports = Object.keys || function keys(O){
   return $keys(O, enumBugKeys);
 };
-},{"./_enum-bug-keys":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_enum-bug-keys.js","./_object-keys-internal":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-keys-internal.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-pie.js":[function(require,module,exports){
+},{"./_enum-bug-keys":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_enum-bug-keys.js","./_object-keys-internal":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-keys-internal.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-pie.js":[function(require,module,exports){
 exports.f = {}.propertyIsEnumerable;
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_property-desc.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_property-desc.js":[function(require,module,exports){
 module.exports = function(bitmap, value){
   return {
     enumerable  : !(bitmap & 1),
@@ -291,20 +291,20 @@ module.exports = function(bitmap, value){
     value       : value
   };
 };
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_shared-key.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_shared-key.js":[function(require,module,exports){
 var shared = require('./_shared')('keys')
   , uid    = require('./_uid');
 module.exports = function(key){
   return shared[key] || (shared[key] = uid(key));
 };
-},{"./_shared":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_shared.js","./_uid":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_uid.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_shared.js":[function(require,module,exports){
+},{"./_shared":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_shared.js","./_uid":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_uid.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_shared.js":[function(require,module,exports){
 var global = require('./_global')
   , SHARED = '__core-js_shared__'
   , store  = global[SHARED] || (global[SHARED] = {});
 module.exports = function(key){
   return store[key] || (store[key] = {});
 };
-},{"./_global":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_global.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-index.js":[function(require,module,exports){
+},{"./_global":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_global.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-index.js":[function(require,module,exports){
 var toInteger = require('./_to-integer')
   , max       = Math.max
   , min       = Math.min;
@@ -312,34 +312,34 @@ module.exports = function(index, length){
   index = toInteger(index);
   return index < 0 ? max(index + length, 0) : min(index, length);
 };
-},{"./_to-integer":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-integer.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-integer.js":[function(require,module,exports){
+},{"./_to-integer":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-integer.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-integer.js":[function(require,module,exports){
 // 7.1.4 ToInteger
 var ceil  = Math.ceil
   , floor = Math.floor;
 module.exports = function(it){
   return isNaN(it = +it) ? 0 : (it > 0 ? floor : ceil)(it);
 };
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-iobject.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-iobject.js":[function(require,module,exports){
 // to indexed object, toObject with fallback for non-array-like ES3 strings
 var IObject = require('./_iobject')
   , defined = require('./_defined');
 module.exports = function(it){
   return IObject(defined(it));
 };
-},{"./_defined":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_defined.js","./_iobject":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_iobject.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-length.js":[function(require,module,exports){
+},{"./_defined":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_defined.js","./_iobject":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_iobject.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-length.js":[function(require,module,exports){
 // 7.1.15 ToLength
 var toInteger = require('./_to-integer')
   , min       = Math.min;
 module.exports = function(it){
   return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
 };
-},{"./_to-integer":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-integer.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-object.js":[function(require,module,exports){
+},{"./_to-integer":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-integer.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-object.js":[function(require,module,exports){
 // 7.1.13 ToObject(argument)
 var defined = require('./_defined');
 module.exports = function(it){
   return Object(defined(it));
 };
-},{"./_defined":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_defined.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_to-primitive.js":[function(require,module,exports){
+},{"./_defined":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_defined.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_to-primitive.js":[function(require,module,exports){
 // 7.1.1 ToPrimitive(input [, PreferredType])
 var isObject = require('./_is-object');
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
@@ -352,18 +352,18 @@ module.exports = function(it, S){
   if(!S && typeof (fn = it.toString) == 'function' && !isObject(val = fn.call(it)))return val;
   throw TypeError("Can't convert object to primitive value");
 };
-},{"./_is-object":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_is-object.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_uid.js":[function(require,module,exports){
+},{"./_is-object":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_is-object.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_uid.js":[function(require,module,exports){
 var id = 0
   , px = Math.random();
 module.exports = function(key){
   return 'Symbol('.concat(key === undefined ? '' : key, ')_', (++id + px).toString(36));
 };
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/es6.object.assign.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/es6.object.assign.js":[function(require,module,exports){
 // 19.1.3.1 Object.assign(target, source)
 var $export = require('./_export');
 
 $export($export.S + $export.F, 'Object', {assign: require('./_object-assign')});
-},{"./_export":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_export.js","./_object-assign":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/core-js/library/modules/_object-assign.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/process/browser.js":[function(require,module,exports){
+},{"./_export":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_export.js","./_object-assign":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/core-js/library/modules/_object-assign.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/process/browser.js":[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -545,7 +545,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vue-hot-reload-api/index.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue-hot-reload-api/index.js":[function(require,module,exports){
 var Vue // late bind
 var version
 var map = window.__VUE_HOT_MAP__ = Object.create(null)
@@ -691,7 +691,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vue/dist/vue.runtime.common.js":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue/dist/vue.runtime.common.js":[function(require,module,exports){
 (function (process,global){
 /*!
  * Vue.js v2.2.6
@@ -7526,7 +7526,7 @@ setTimeout(function () {
 module.exports = Vue$2;
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/process/browser.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vueify/lib/insert-css.js":[function(require,module,exports){
+},{"_process":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/process/browser.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vueify/lib/insert-css.js":[function(require,module,exports){
 var inserted = exports.cache = {}
 
 function noop () {}
@@ -7551,7 +7551,7 @@ exports.insert = function (css) {
   }
 }
 
-},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/src/app.vue":[function(require,module,exports){
+},{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/app.vue":[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 758, stdin */\n.app {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background: #222;\n  color: #ddd;\n  font: 400 12px/1.0 \"Helvetica Neue\", sans-serif; }\n  /* line 771, stdin */\n  .app .head {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 30px;\n    background: #eee; }\n    /* line 780, stdin */\n    .app .head .searchBox {\n      position: absolute;\n      width: calc( 30% - 16px);\n      height: 22px;\n      padding: 0 4px;\n      border: none;\n      left: 4px;\n      top: 4px;\n      border-radius: 4px;\n      background: #555;\n      color: #fff; }\n  /* line 796, stdin */\n  .app .foot {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: 60px;\n    color: #222;\n    background: #fafafa; }\n    /* line 805, stdin */\n    .app .foot .player {\n      position: absolute;\n      left: 60px;\n      width: calc( 100% - 70px);\n      bottom: 5px; }\n    /* line 812, stdin */\n    .app .foot .cover {\n      position: absolute;\n      left: 5px;\n      top: 5px;\n      width: 50px;\n      height: 50px;\n      background-size: cover;\n      background-color: #222; }\n    /* line 823, stdin */\n    .app .foot .button {\n      position: absolute;\n      top: 2px;\n      width: 24px;\n      height: 24px;\n      opacity: 0.72;\n      cursor: pointer; }\n      /* line 833, stdin */\n      .app .foot .button.prev {\n        left: 64px; }\n      /* line 837, stdin */\n      .app .foot .button.next {\n        left: 94px; }\n      /* line 841, stdin */\n      .app .foot .button.shuffle {\n        left: 124px; }\n        /* line 844, stdin */\n        .app .foot .button.shuffle.active {\n          opacity: 0.72; }\n        /* line 845, stdin */\n        .app .foot .button.shuffle:not(.active) {\n          opacity: 0.28; }\n    /* line 849, stdin */\n    .app .foot .info {\n      position: absolute;\n      left: 160px;\n      top: 7px; }\n  /* line 856, stdin */\n  .app .editor {\n    position: absolute;\n    left: calc( 50% - 150px);\n    top: 40px;\n    width: calc( 300px - 20px);\n    padding: 10px;\n    background: #ddd;\n    color: #222;\n    border-radius: 2px; }\n    /* line 867, stdin */\n    .app .editor .editorItem {\n      position: relative;\n      width: 100%;\n      height: 20px; }\n      /* line 872, stdin */\n      .app .editor .editorItem.comment {\n        height: 50px; }\n      /* line 876, stdin */\n      .app .editor .editorItem.cover {\n        height: 80px; }\n      /* line 880, stdin */\n      .app .editor .editorItem.buttons {\n        text-align: center; }\n      /* line 885, stdin */\n      .app .editor .editorItem input:not(.button) {\n        position: absolute;\n        left: 90px;\n        border: none;\n        width: calc( 100% - 100px);\n        height: 14px;\n        padding: 0 5px;\n        margin-top: -1px;\n        border-radius: 2px;\n        background: #eee; }\n      /* line 898, stdin */\n      .app .editor .editorItem input.button {\n        position: relative;\n        width: 80px; }\n      /* line 904, stdin */\n      .app .editor .editorItem .editorComment {\n        display: inline-block;\n        position: absolute;\n        left: 90px;\n        width: calc( 100% - 100px);\n        padding: 0 5px;\n        height: 40px;\n        border: none;\n        resize: none;\n        border-radius: 2px;\n        background: #eee; }\n      /* line 918, stdin */\n      .app .editor .editorItem .editorCover {\n        display: inline-block;\n        position: absolute;\n        left: 90px;\n        width: 72px;\n        height: 72px;\n        background-size: cover;\n        background-color: #222; }\n  /* line 932, stdin */\n  .app .filelistHead {\n    position: absolute;\n    left: 0px;\n    top: 30px;\n    width: 100%;\n    height: 20px;\n    background: #444;\n    white-space: nowrap;\n    overflow: hidden; }\n    /* line 944, stdin */\n    .app .filelistHead .menuButton {\n      position: absolute;\n      left: 2px;\n      top: 2px;\n      width: 16px;\n      height: 16px;\n      background: #777;\n      border-radius: 2px;\n      cursor: pointer; }\n      /* line 956, stdin */\n      .app .filelistHead .menuButton:hover {\n        background: #789; }\n      /* line 960, stdin */\n      .app .filelistHead .menuButton:active {\n        background: #567; }\n    /* line 965, stdin */\n    .app .filelistHead .attrs {\n      position: absolute;\n      left: 70px;\n      height: 100%; }\n      /* line 970, stdin */\n      .app .filelistHead .attrs .attr {\n        position: relative;\n        display: inline-block;\n        height: 100%;\n        padding-right: 10px;\n        cursor: pointer; }\n        /* line 978, stdin */\n        .app .filelistHead .attrs .attr:hover {\n          background: #456; }\n        /* line 982, stdin */\n        .app .filelistHead .attrs .attr .name {\n          position: absolute;\n          width: calc( 100% - 10px);\n          top: 5px;\n          text-overflow: ellipsis;\n          overflow: hidden; }\n        /* line 991, stdin */\n        .app .filelistHead .attrs .attr .resizer {\n          position: absolute;\n          right: 0;\n          top: 0;\n          width: 4px;\n          height: 100%;\n          cursor: col-resize; }\n          /* line 1000, stdin */\n          .app .filelistHead .attrs .attr .resizer:hover {\n            background: #678; }\n  /* line 1008, stdin */\n  .app .filelistMenu {\n    position: absolute;\n    left: 0px;\n    top: 50px;\n    width: 120px;\n    background: #eee;\n    color: #111; }\n    /* line 1017, stdin */\n    .app .filelistMenu .addBox {\n      width: calc( 100% - 16px);\n      height: 16px;\n      margin: 4px;\n      padding: 0 4px;\n      border: none;\n      border-radius: 4px;\n      background: #ccc;\n      color: #000; }\n    /* line 1029, stdin */\n    .app .filelistMenu .option {\n      margin: 2px;\n      padding: 2px;\n      cursor: pointer; }\n      /* line 1035, stdin */\n      .app .filelistMenu .option:hover {\n        background: #bcd; }\n      /* line 1039, stdin */\n      .app .filelistMenu .option:active {\n        background: #89a; }\n  /* line 1045, stdin */\n  .app .filelist {\n    position: absolute;\n    left: 0px;\n    top: 50px;\n    width: 100%;\n    height: calc( 100% - 110px);\n    overflow-x: hidden;\n    overflow-y: scroll; }\n    /* line 1055, stdin */\n    .app .filelist .filelistInside .file {\n      position: relative;\n      padding: 2px;\n      height: 16px;\n      white-space: nowrap;\n      background: #222;\n      cursor: pointer; }\n      /* line 1065, stdin */\n      .app .filelist .filelistInside .file.odd {\n        background: #2b2b2b; }\n      /* line 1069, stdin */\n      .app .filelist .filelistInside .file:hover {\n        background: #345; }\n      /* line 1073, stdin */\n      .app .filelist .filelistInside .file .cover {\n        position: absolute;\n        left: 2px;\n        top: 2px;\n        width: 60px;\n        height: 100%;\n        overflow: hidden;\n        margin: -2px 10px -2px -2px;\n        background-size: cover;\n        background-color: #222; }\n      /* line 1086, stdin */\n      .app .filelist .filelistInside .file .attrs {\n        position: absolute;\n        left: 70px; }\n        /* line 1090, stdin */\n        .app .filelist .filelistInside .file .attrs .attr {\n          display: inline-block;\n          text-overflow: ellipsis;\n          overflow: hidden;\n          padding-bottom: 2px;\n          margin-top: 2px;\n          margin-right: 10px; }")
 ;(function(){
 "use strict";
@@ -7684,14 +7684,14 @@ exports.default = {
   methods: {
     saveStorage: function saveStorage(key, value) {
       this.storageObj[key] = value;
-      localStorage.setItem("mp3-server", (0, _stringify2.default)(this.storageObj));
+      localStorage.setItem("mp3cat", (0, _stringify2.default)(this.storageObj));
     },
     loadStorage: function loadStorage() {
-      if (localStorage["mp3-server"]) {
+      if (localStorage["mp3cat"]) {
         var json = null;
 
         try {
-          json = JSON.parse(localStorage["mp3-server"]);
+          json = JSON.parse(localStorage["mp3cat"]);
         } catch (exception) {}
 
         if (json) {
@@ -7725,9 +7725,9 @@ exports.default = {
     },
     updateTitle: function updateTitle() {
       if (!this.$refs.player.paused && this.playingFile) {
-        document.title = this.getArtistTitleString(this.playingFile) + " - MP3-Server";
+        document.title = this.getArtistTitleString(this.playingFile) + " - MP3Cat";
       } else {
-        document.title = "MP3-Server";
+        document.title = "MP3Cat";
       }
 
       setTimeout(this.updateTitle, 1000);
@@ -8146,12 +8146,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-7e0bfa81", __vue__options__)
+    hotAPI.createRecord("data-v-1fa650a7", __vue__options__)
   } else {
-    hotAPI.reload("data-v-7e0bfa81", __vue__options__)
+    hotAPI.reload("data-v-1fa650a7", __vue__options__)
   }
 })()}
-},{"./cover.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/src/cover.vue","./flicker.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/src/flicker.vue","babel-runtime/core-js/json/stringify":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/babel-runtime/core-js/json/stringify.js","babel-runtime/core-js/object/assign":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/babel-runtime/core-js/object/assign.js","vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vue/dist/vue.runtime.common.js","vue-hot-reload-api":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vue-hot-reload-api/index.js","vueify/lib/insert-css":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vueify/lib/insert-css.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/src/cover.vue":[function(require,module,exports){
+},{"./cover.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/cover.vue","./flicker.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/flicker.vue","babel-runtime/core-js/json/stringify":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/babel-runtime/core-js/json/stringify.js","babel-runtime/core-js/object/assign":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/babel-runtime/core-js/object/assign.js","vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue/dist/vue.runtime.common.js","vue-hot-reload-api":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue-hot-reload-api/index.js","vueify/lib/insert-css":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vueify/lib/insert-css.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/cover.vue":[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 22, stdin */\n.cover-cover {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-size: cover;\n  background-color: #222; }")
 ;(function(){
 "use strict";
@@ -8182,12 +8182,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-f2f2b1d2", __vue__options__)
+    hotAPI.createRecord("data-v-2ae40bbd", __vue__options__)
   } else {
-    hotAPI.reload("data-v-f2f2b1d2", __vue__options__)
+    hotAPI.reload("data-v-2ae40bbd", __vue__options__)
   }
 })()}
-},{"vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vue/dist/vue.runtime.common.js","vue-hot-reload-api":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vue-hot-reload-api/index.js","vueify/lib/insert-css":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vueify/lib/insert-css.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/src/flicker.vue":[function(require,module,exports){
+},{"vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue/dist/vue.runtime.common.js","vue-hot-reload-api":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue-hot-reload-api/index.js","vueify/lib/insert-css":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vueify/lib/insert-css.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/flicker.vue":[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 113, stdin */\n.flicker {\n  display: none;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  top: 0;\n  cursor: pointer; }\n  /* line 123, stdin */\n  .flicker.active {\n    display: block; }\n  /* line 127, stdin */\n  .flicker * {\n    user-select: none;\n    pointer-events: none; }\n  /* line 132, stdin */\n  .flicker .bg {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    background: #000;\n    opacity: 0.7; }\n  /* line 143, stdin */\n  .flicker .imageContainer {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 100%;\n    animation-name: imageContainerStart;\n    animation-duration: 0.1s;\n    animation-timing-function: ease; }\n\n@keyframes imageContainerStart {\n  0% {\n    transform: scale(0.8);\n    opacity: 0.0; }\n  100% {\n    transform: scale(1);\n    opacity: 1.0; } }\n    /* line 167, stdin */\n    .flicker .imageContainer .image {\n      position: absolute;\n      width: 80px;\n      height: 80px;\n      animation-name: start;\n      animation-duration: 0.1s;\n      animation-timing-function: ease; }\n      /* line 176, stdin */\n      .flicker .imageContainer .image.selected {\n        transform: scale(1);\n        opacity: 1.0;\n        animation-name: selectedAni;\n        animation-duration: 0.1s;\n        animation-timing-function: ease; }\n\n@keyframes selectedAni {\n  0% {\n    transform: scale(0.8);\n    opacity: 0.7; }\n  100% {\n    transform: scale(1);\n    opacity: 1.0; } }\n      /* line 197, stdin */\n      .flicker .imageContainer .image:not(.selected) {\n        transform: scale(0.8);\n        opacity: 0.7;\n        animation-name: unselectedAni;\n        animation-duration: 0.1s;\n        animation-timing-function: ease; }\n\n@keyframes unselectedAni {\n  0% {\n    transform: scale(1);\n    opacity: 1.0; }\n  100% {\n    transform: scale(0.8);\n    opacity: 0.7; } }\n      /* line 218, stdin */\n      .flicker .imageContainer .image.imageCenter {\n        left: calc( 50% - 40px);\n        top: calc( 50% - 40px); }\n      /* line 223, stdin */\n      .flicker .imageContainer .image.imageLeft {\n        left: calc( 50% - 120px);\n        top: calc( 50% - 40px); }\n      /* line 228, stdin */\n      .flicker .imageContainer .image.imageRight {\n        left: calc( 50% + 40px);\n        top: calc( 50% - 40px); }\n      /* line 233, stdin */\n      .flicker .imageContainer .image.imageUp {\n        left: calc( 50% - 40px);\n        top: calc( 50% - 120px); }\n      /* line 238, stdin */\n      .flicker .imageContainer .image.imageDown {\n        left: calc( 50% - 40px);\n        top: calc( 50% + 40px); }")
 ;(function(){
 "use strict";
@@ -8280,12 +8280,12 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   module.hot.accept()
   module.hot.dispose(__vueify_style_dispose__)
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-75459ad8", __vue__options__)
+    hotAPI.createRecord("data-v-77dc6dfe", __vue__options__)
   } else {
-    hotAPI.reload("data-v-75459ad8", __vue__options__)
+    hotAPI.reload("data-v-77dc6dfe", __vue__options__)
   }
 })()}
-},{"vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vue/dist/vue.runtime.common.js","vue-hot-reload-api":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vue-hot-reload-api/index.js","vueify/lib/insert-css":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vueify/lib/insert-css.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/src/main.js":[function(require,module,exports){
+},{"vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue/dist/vue.runtime.common.js","vue-hot-reload-api":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue-hot-reload-api/index.js","vueify/lib/insert-css":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vueify/lib/insert-css.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/main.js":[function(require,module,exports){
 "use strict";
 
 var vue = require("vue");
@@ -8298,4 +8298,4 @@ new vue({
 	}
 });
 
-},{"./app.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/src/app.vue","vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/node_modules/vue/dist/vue.runtime.common.js"}]},{},["/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3-server/src/main.js"]);
+},{"./app.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/app.vue","vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue/dist/vue.runtime.common.js"}]},{},["/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/main.js"]);

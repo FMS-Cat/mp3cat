@@ -292,15 +292,15 @@ export default {
   methods: {
     saveStorage( key, value ) {
       this.storageObj[ key ] = value;
-      localStorage.setItem( "mp3-server", JSON.stringify( this.storageObj ) );
+      localStorage.setItem( "mp3cat", JSON.stringify( this.storageObj ) );
     },
 
     loadStorage() {
-      if ( localStorage[ "mp3-server" ] ) {
+      if ( localStorage[ "mp3cat" ] ) {
         let json = null;
 
         try {
-          json = JSON.parse( localStorage[ "mp3-server" ] );
+          json = JSON.parse( localStorage[ "mp3cat" ] );
         } catch ( exception ) {
           // do nothing
         }
@@ -330,9 +330,9 @@ export default {
 
     updateTitle() {
       if ( !this.$refs.player.paused && this.playingFile ) {
-        document.title = this.getArtistTitleString( this.playingFile ) + " - MP3-Server";
+        document.title = this.getArtistTitleString( this.playingFile ) + " - MP3Cat";
       } else {
-        document.title = "MP3-Server";
+        document.title = "MP3Cat";
       }
 
       setTimeout( this.updateTitle, 1000 );

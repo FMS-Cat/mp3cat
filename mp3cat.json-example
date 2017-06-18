@@ -3,7 +3,7 @@
   "twauth": {
     "consumerKey": "YOUR CONSUMER KEY",
     "consumerSecret": "YOUR SECRET KEY",
-    "callbackURL": "YOUR CALLBACK URL",
+    "callbackURL": "http://<YOUR SERVER URL>/twauthCallback",
     "users": {
       "YOUR TWITTER USER NAME": { "approved": true, "mighty": true }
     },

@@ -3,7 +3,7 @@ let MongoClient = require( "mongodb" ).MongoClient;
 
 let scanFolder = require( "./scan" );
 
-let mongoUrl = "mongodb://localhost:27017/mp3-server";
+let mongoUrl = "mongodb://localhost:27017/mp3cat";
 
 let queryParser = require( "./query" );
 

@@ -53,6 +53,11 @@ module.exports = ( options ) => {
     login: ( req, res, next ) => {
       if ( !oauth ) { throw "You must do initOAuth at first"; }
 
+      if ( req.session.twauthName ) {
+        next();
+        return;
+      }
+
       oauth.getOAuthRequestToken( ( _error, _token, _secret, _results ) => {
         if ( _error ) {
           console.error( _error );

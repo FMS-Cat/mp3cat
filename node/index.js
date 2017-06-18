@@ -1,4 +1,4 @@
-let SETTINGS = require( "../mp3-server.json" );
+let SETTINGS = require( "../mp3cat.json" );
 
 let assert = require( "assert" );
 
@@ -72,7 +72,7 @@ db.start( () => {
       console.log( "Scan complete!" );
     } );
   }
-  
+
   if ( args.options.rename ) {
     db.renameScan( args.options.rename, libraryPath, () => {
       console.log( "Renamed!" );
@@ -191,7 +191,7 @@ app.use( express.static( pathlib.join( __dirname, "../dist" ) ) );
 let port = process.env.PORT || args.options.port || 4077;
 
 app.listen( port, () => {
-  console.log( "MP3-Server is running..." );
+  console.log( "MP3Cat is running..." );
   console.log( "Library path: " + libraryPath );
   console.log( "Listening port: " + port );
 } );
