@@ -1,0 +1,13 @@
+{
+  "loginPath": "/login",
+  "twauth": {
+    "consumerKey": "YOUR CONSUMER KEY",
+    "consumerSecret": "YOUR SECRET KEY",
+    "callbackURL": "YOUR CALLBACK URL",
+    "users": {
+      "YOUR TWITTER USER NAME": { "approved": true, "mighty": true }
+    },
+    "localPermission": { "approved": true, "mighty": true },
+    "meme": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  }
+}

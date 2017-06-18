@@ -1,0 +1,19 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 100 100"
+  width="256"
+  height="256"
+  font-family="Helvetica Neue"
+  font-weight="300"
+>
+  <path fill="#fff" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" d="
+    M 35 15
+    l 0 35
+    l -20 0
+    l 35 35
+    l 35 -35
+    l -20 0
+    l 0 -35
+    z
+  " />
+</svg>
