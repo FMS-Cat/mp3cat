@@ -68,13 +68,14 @@ The software is tested only on my environment (RasPi3) 😖
 - mp3cat.json
   - make users can change filename format, also can disable auto rename
 - client stuff
+  - mobile friendly UI
   - add notification to make clear connection status
   - bug: shuffle can't be disabled
-  - improve shuffle procedure
 - server stuff
   - make faster
   - currently some heavy ffmpeg conversion kills the server
 - other
+  - improve shuffle procedure
   - refactor
 
 ## Shoutouts
