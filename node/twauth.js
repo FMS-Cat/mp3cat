@@ -39,7 +39,7 @@ module.exports = ( options ) => {
             return;
           }
 
-          let user = twitterUsers[ name ];
+          let user = users[ name ];
           if ( !user[ key ] ) {
             res.send( "You are not mighty enough to do this", 400 );
             return;
