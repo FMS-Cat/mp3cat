@@ -119,7 +119,7 @@
         Disc No. <input class="num" v-model="editingFile.disc" v-on:keydown.stop="onEditorKeyDown" />
       </div>
       <div class="editorItem">
-        BPM <input class="num" v-model="editingFile.bpm" v-on:keydown.stop="onEditorKeyDown" />
+        BPM <input class="num" v-model="editingFile.bpm" v-on:keydown.stop="onEditorKeyDownBPM" />
       </div>
       <div class="editorItem comment">
         Comment <textarea class="editorComment" v-model="editingFile.comment" v-on:keydown.stop="onEditorKeyDown" />
@@ -178,6 +178,8 @@
 </template>
 
 <script>
+import tap from "./tap.js";
+
 import flicker from "./flicker.vue";
 import cover from "./cover.vue";
 
@@ -591,9 +593,20 @@ export default {
 
     onEditorKeyDown( event ) {
       if ( event.which === 13 ) {
+        event.preventDefault();
         this.editFileOK();
       } else if ( event.which === 27 ) {
+        event.preventDefault();
         this.editFileCancel();
+      }
+    },
+
+    onEditorKeyDownBPM( event ) {
+      if ( event.which === 32 ) {
+        event.preventDefault();
+        this.editingFile.bpm = Math.floor( tap() * 100 ) / 100;
+      } else {
+        this.onEditorKeyDown( event );
       }
     },
 
