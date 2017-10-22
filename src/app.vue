@@ -54,7 +54,7 @@
         v-on:mousedown.left="flickerMusic( file, index )"
       >
         <cover class="cover"
-          v-bind:src="'cover/' + file.path"
+          v-bind:src="'thumb/' + file.thumb"
         />
         <div class="attrs">
           <div class="attr"

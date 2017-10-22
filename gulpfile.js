@@ -65,7 +65,7 @@ let recursiveUnlink = ( _path ) => {
     } );
     fs.rmdirSync( _path );
   }
-}
+};
 
 gulp.task( 'clean', () => {
   recursiveUnlink( './dist' );

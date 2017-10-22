@@ -13,20 +13,34 @@ let convertMp3 = ( path, callback ) => {
     .save( path + ".mp3" );
 };
 
-let convertJpg = ( path, callback ) => {
+let convertPng = ( path, callback ) => {
   let command = ffmpeg( path )
     .size( "500x?" )
-    .outputOptions( "-q", "1", "-pix_fmt", "yuvj420p" )
+    .outputOptions( "-pix_fmt", "yuvj420p" )
     .on( "end", () => {
       callback( null );
     } )
     .on( "error", ( error ) => {
       callback( error );
     } )
-    .save( path + ".jpg" );
+    .save( path + ".png" );
+};
+
+let convertThumb = ( path, out, callback ) => {
+  let command = ffmpeg( path )
+    .size( "100x?" )
+    .outputOptions( "-q", "2", "-pix_fmt", "yuvj420p" )
+    .on( "end", () => {
+      callback( null );
+    } )
+    .on( "error", ( error ) => {
+      callback( error );
+    } )
+    .save( out );
 };
 
 module.exports = {
   mp3: convertMp3,
-  jpg: convertJpg
+  png: convertPng,
+  thumb: convertThumb
 };

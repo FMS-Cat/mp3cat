@@ -45,7 +45,10 @@ let scanFolder = ( options ) => {
     let entRelPath = pathlib.join( relPath, ent );
     let isDir = fs.statSync( entPath ).isDirectory();
 
-    if ( isDir ) {
+    if ( pathlib.basename( entRelPath )[ 0 ] === "." ) {
+      console.log( "🔞 Ignored: " + entRelPath );
+      scanEnt();
+    } else if ( isDir ) {
       scanFolder( {
         libPath: libPath,
         relPath: entRelPath,

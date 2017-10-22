@@ -3,9 +3,9 @@ let assert = require( "assert" );
 let fs = require( "fs" );
 let pathlib = require( "path" );
 let taglib = require( "taglib2" );
+let thumb = require( "./thumb" );
 
 let convert = require( "./convert" );
-
 
 let black = {
   mime: "image/gif",
@@ -62,7 +62,8 @@ let format = ( file ) => {
     year: file.year ? parseInt( file.year ) : null,
     disc: file.disc ? parseInt( file.disc ) : null,
     track: file.track ? parseInt( file.track ) : null,
-    length: file.length
+    length: file.length,
+    thumb: file.thumb
   };
 };
 
@@ -87,7 +88,7 @@ let getCover = ( libPath, mp3Path ) => {
     !fs.existsSync( mp3Fullpath ) ||
     fs.statSync( mp3Fullpath ).isDirectory()
   ) {
-    return black;
+    return null;
   }
 
   let tag = taglib.readTagsSync( mp3Fullpath );
@@ -102,7 +103,7 @@ let getCover = ( libPath, mp3Path ) => {
   }
 };
 
-let setCover = ( libPath, mp3Path, imagePath ) => {
+let setCover = ( libPath, mp3Path, image ) => {
   let mp3Fullpath = pathlib.join( libPath, mp3Path );
   if (
     !fs.existsSync( mp3Fullpath ) ||
@@ -114,8 +115,8 @@ let setCover = ( libPath, mp3Path, imagePath ) => {
   taglib.writeTagsSync( mp3Fullpath, {
     pictures: [
       {
-        "mimetype": "image/jpeg",
-        "picture": fs.readFileSync( imagePath )
+        "mimetype": "image/png",
+        "picture": image
       }
     ]
   } );

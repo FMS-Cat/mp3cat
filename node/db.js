@@ -12,6 +12,8 @@ let fs = require( "fs" );
 let pathlib = require( "path" );
 
 let tagman = require( "./tagman" );
+let convert = require( "./convert" );
+let thumb = require( "./thumb" );
 
 let db;
 let coll;
@@ -30,11 +32,11 @@ let drop = () => {
   coll.drop();
 };
 
-let scan = ( path, callback ) => {
+let scan = ( libPath, callback ) => {
   console.log( "Scanning..." );
 
   scanFolder( {
-    libPath: path,
+    libPath: libPath,
     inserter: ( mp3s, images, insCallback ) => {
       let count = mp3s.length;
       let done = () => {
@@ -43,18 +45,37 @@ let scan = ( path, callback ) => {
       };
       if ( count === 0 ) { count = 1; done(); }
 
-      mp3s.map( ( mp3 ) => {
-        console.log( "MP3 found: " + mp3.path );
+      mp3s.map( ( file ) => {
+        console.log( "MP3 found: " + file.path );
 
-        coll.update(
-          { path: mp3.path },
-          { $set: mp3 },
-          { upsert: true },
-          ( error ) => {
-            console.log( "Scanned: " + mp3.path );
-            done();
-          }
-        );
+        let go = () => {
+          coll.update(
+            { path: file.path },
+            { $set: file },
+            { upsert: true },
+            ( error ) => {
+              console.log( "Scanned: " + file.path );
+              done();
+            }
+          );
+        };
+
+        let oldCover = tagman.getCover( libPath, file.path );
+        if ( oldCover ) {
+          let tempPath = pathlib.join( libPath, ".mp3cat", "temp", String( +new Date() ) );
+          fs.writeFileSync( tempPath, oldCover.binary );
+          cover( libPath, file, tempPath, ( error, hash, image ) => {
+            if ( error ) {
+              callback( error );
+            } else {
+              coverImage = image;
+              file.thumb = hash;
+              go();
+            }
+          } );
+        } else {
+          go();
+        }
       } );
 
       images.map( ( image ) => {
@@ -225,7 +246,31 @@ let count = ( query, limit, skip, callback ) => {
   } );
 };
 
-let update = ( libPath, file, cover, bulk, callback ) => {
+let cover = ( libPath, file, coverPath, callback ) => {
+  convert.png( coverPath, ( error ) => {
+    if ( error ) {
+      fs.unlinkSync( coverPath );
+      callback( error );
+      return;
+    }
+
+    let image = fs.readFileSync( coverPath + ".png" );
+    fs.unlinkSync( coverPath + ".png" );
+    
+    thumb.add( libPath, file.mp3Path, coverPath, ( error, hash ) => {
+      fs.unlinkSync( coverPath );
+
+      if ( error ) {
+        callback( error );
+        return;
+      }
+
+      callback( null, hash, image );
+    } );
+  } );
+};
+
+let update = ( libPath, file, coverPath, bulk, callback ) => {
   delete file._id;
 
   if ( bulk !== "" ) {
@@ -252,7 +297,7 @@ let update = ( libPath, file, cover, bulk, callback ) => {
           }
         }
 
-        update( libPath, f, cover, "", done );
+        update( libPath, f, coverPath, "", done );
       } );
     } );
 
@@ -282,11 +327,13 @@ let update = ( libPath, file, cover, bulk, callback ) => {
     file.dir = dirname;
     file.file = filename;
 
-    let olddir = pathlib.join( libPath, pathlib.dirname( oldpath ) );
-    if ( fs.existsSync( olddir ) ) {
-      let files = fs.readdirSync( olddir );
-      if ( !files.length ) {
-        fs.rmdirSync( olddir );
+    if ( pathlib.dirname( oldpath ) !== pathlib.join( ".mp3cat", "temp" ) ) {
+      let olddir = pathlib.join( libPath, pathlib.dirname( oldpath ) );
+      if ( fs.existsSync( olddir ) ) {
+        let files = fs.readdirSync( olddir );
+        if ( !files.length ) {
+          fs.rmdirSync( olddir );
+        }
       }
     }
   } else {
@@ -296,19 +343,49 @@ let update = ( libPath, file, cover, bulk, callback ) => {
 
   file = tagman.format( file );
 
-  coll.update(
-    { path: oldpath },
-    { $set: file },
-    { upsert: true },
-    ( error, result ) => {
-      assert.equal( error, null );
-      tagman.write( libPath, file );
-      if ( cover ) {
-        tagman.setCover( libPath, file.path, cover );
+  let go = () => {
+    coll.update(
+      { path: oldpath },
+      { $set: file },
+      { upsert: true },
+      ( error, result ) => {
+        assert.equal( error, null );
+        tagman.write( libPath, file );
+        if ( coverImage ) {
+          tagman.setCover( libPath, file.path, coverImage );
+        }
+        callback( null );
       }
-      callback( null );
+    );
+  };
+
+  let coverImage = null;
+  if ( coverPath ) {
+    cover( libPath, file, coverPath, ( error, hash, image ) => {
+      if ( error ) {
+        callback( error );
+      } else {
+        coverImage = image;
+        file.thumb = hash;
+        go();
+      }
+    } );
+  } else {
+    let oldCover = tagman.getCover( libPath, file.path );
+    if ( oldCover ) {
+      let tempPath = pathlib.join( libPath, ".mp3cat", "temp", String( +new Date() ) );
+      fs.writeFileSync( tempPath, oldCover.binary );
+      cover( libPath, file, tempPath, ( error, hash, image ) => {
+        if ( error ) {
+          callback( error );
+        } else {
+          coverImage = image;
+          file.thumb = hash;
+          go();
+        }
+      } );
     }
-  );
+  }
 };
 
 let add = ( libPath, path, callback ) => {
@@ -322,7 +399,14 @@ let add = ( libPath, path, callback ) => {
 let remove = ( libPath, path, callback ) => {
   coll.remove( { path: path } );
 
-  fs.unlinkSync( pathlib.join( libPath, path ) );
+  let fullpath = pathlib.join( libPath, path );
+  fs.unlinkSync( fullpath );
+
+  let olddir = pathlib.dirname( fullpath );
+  let files = fs.readdirSync( olddir );
+  if ( !files.length ) {
+    fs.rmdirSync( olddir );
+  }
 
   callback( null );
 };

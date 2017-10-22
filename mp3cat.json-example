@@ -1,4 +1,5 @@
 {
+  "sessionSecret": "PUT RANDOM TEXT HERE",
   "loginPath": "/login",
   "twauth": {
     "consumerKey": "YOUR CONSUMER KEY",
