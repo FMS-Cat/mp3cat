@@ -149,8 +149,16 @@ app.post( "/update", twauth.check( "mighty" ), upload.single( "image" ), ( req, 
       if ( error ) {
         console.error( error );
         res.status( 500 ).send( error );
+
+        if ( req.file ) {
+          fs.unlinkSync( req.file.path );
+        }
       } else {
         res.send();
+
+        if ( req.file ) {
+          fs.unlinkSync( req.file.path );
+        }
       }
     }
   );

@@ -247,19 +247,10 @@ let count = ( query, limit, skip, callback ) => {
 };
 
 let cover = ( libPath, file, coverPath, callback ) => {
-  convert.png( coverPath, ( error ) => {
-    if ( error ) {
-      fs.unlinkSync( coverPath );
-      callback( error );
-      return;
-    }
-
+  let go = () => {
     let image = fs.readFileSync( coverPath + ".png" );
-    fs.unlinkSync( coverPath + ".png" );
-    
-    thumb.add( libPath, file.mp3Path, coverPath, ( error, hash ) => {
-      fs.unlinkSync( coverPath );
 
+    thumb.add( libPath, file.mp3Path, coverPath, ( error, hash ) => {
       if ( error ) {
         callback( error );
         return;
@@ -267,11 +258,22 @@ let cover = ( libPath, file, coverPath, callback ) => {
 
       callback( null, hash, image );
     } );
-  } );
+  };
+
+  if ( fs.existsSync( coverPath + ".png" ) ) {
+    go();
+  } else {
+    convert.png( coverPath, ( error ) => {
+      if ( error ) { callback( error ); return; }
+      go();
+    } );
+  }
 };
 
 let update = ( libPath, file, coverPath, bulk, callback ) => {
   delete file._id;
+
+  // ------
 
   if ( bulk !== "" ) {
     let q = queryParser( bulk );
@@ -303,6 +305,8 @@ let update = ( libPath, file, coverPath, bulk, callback ) => {
 
     return;
   }
+
+  // ------
 
   let dirname = genDirname( file );
   if ( dirname ) {

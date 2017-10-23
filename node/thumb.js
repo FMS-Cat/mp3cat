@@ -31,15 +31,18 @@ let add = ( libPath, mp3Path, coverPath, callback ) => {
 
   let outPath = pathlib.join( thumbPath, hash ) + ".jpg";
 
-  convert.thumb( coverPath, outPath, ( error ) => {
-    if ( error ) {
-      fs.unlinkSync( outPath );
-      callback( error );
-      console.log( error );
-    }
-    
+  if ( fs.existsSync( outPath ) ) {
     callback( null, hash );
-  } );
+  } else {
+    convert.thumb( coverPath, outPath, ( error ) => {
+      if ( error ) {
+        callback( error );
+        console.log( error );
+      }
+      
+      callback( null, hash );
+    } );
+  }
 };
 
 module.exports = {

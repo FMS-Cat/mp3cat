@@ -8328,7 +8328,6 @@ var tap = function tap() {
   var now = +new Date() * 0.001;
 
   if (TIMEOUT < now - last) {
-    console.log("hi");
     begin = now;
     last = now;
     count = 0;

@@ -88,7 +88,7 @@ let getCover = ( libPath, mp3Path ) => {
     !fs.existsSync( mp3Fullpath ) ||
     fs.statSync( mp3Fullpath ).isDirectory()
   ) {
-    return null;
+    return black;
   }
 
   let tag = taglib.readTagsSync( mp3Fullpath );
