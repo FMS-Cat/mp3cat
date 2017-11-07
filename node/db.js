@@ -66,20 +66,16 @@ let scan = ( libPath, callback ) => {
           fs.writeFileSync( tempPath, oldCover.binary );
           cover( libPath, file, tempPath, ( error, hash, image ) => {
             if ( error ) {
-              callback( error );
+              console.error( error );
             } else {
               coverImage = image;
               file.thumb = hash;
-              go();
             }
+            go();
           } );
         } else {
           go();
         }
-      } );
-
-      images.map( ( image ) => {
-        console.log( "Image found: " + image );
       } );
     },
     callback: callback

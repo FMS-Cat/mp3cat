@@ -88,7 +88,7 @@ db.start( () => {
   }
 
   if ( args.options.scan ) {
-    db.scan( libPath, () => {
+    db.scan( libPath, ( error ) => {
       console.log( "Scan complete!" );
     } );
   }

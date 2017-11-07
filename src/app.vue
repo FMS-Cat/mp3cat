@@ -50,6 +50,7 @@
     <div class="filelistInside">
       <div class="file"
         v-for="( file, index ) in files"
+        v-bind:key="index"
         v-bind:class="{ odd: index % 2 === 1 }"
         v-on:mousedown.left="flickerMusic( file, index )"
       >
@@ -58,7 +59,8 @@
         />
         <div class="attrs">
           <div class="attr"
-            v-for="attr in filelistAttrs"
+            v-for="( attr, index ) in filelistAttrs"
+            v-bind:key="index"
             v-bind:style="{ width: ( attr.width - 10 ) + 'px' }"
           >{{ file[ attr.field ] || ( file.json ? file.json[ attr.field ] : null ) }}</div>
         </div>
@@ -75,7 +77,8 @@
     <div class="attrs"
     >
       <div class="attr"
-        v-for="attr in filelistAttrs"
+        v-for="( attr, index ) in filelistAttrs"
+        v-bind:key="index"
         v-bind:style="{ width: ( attr.width - 10 ) + 'px' }"
         v-on:mousedown.stop="grabFilelistAttr( attr )"
       >
@@ -95,7 +98,8 @@
       v-on:keydown.enter="addFilelistAttr"
     />
     <div class="option"
-      v-for="attr in filelistAttrs"
+      v-for="( attr, index ) in filelistAttrs"
+      v-bind:key="index"
       v-on:click="removeFilelistAttr( attr )"
     >{{ attr.field }}</div>
   </div>
@@ -160,6 +164,10 @@
     </template>
   </div>
 
+  <balloon
+    ref="balloon"
+  />
+
   <flicker
     v-bind:active="flicker.active"
     v-bind:imageSrcCenter="flicker.image.center"
@@ -180,6 +188,7 @@
 <script>
 import tap from "./tap.js";
 
+import balloon from "./balloon.vue";
 import flicker from "./flicker.vue";
 import cover from "./cover.vue";
 
@@ -454,6 +463,11 @@ export default {
     editFileOK() {
       this.editing = false;
 
+      let balloon = this.$refs.balloon.addBalloon( {
+        header: "Updating song tags...",
+        closable: false
+      } );
+
       post( "./update", {
         image: this.editingCover,
         json: JSON.stringify( this.editingFile ),
@@ -461,8 +475,18 @@ export default {
       }, ( status, res ) => {
         if ( status !== 200 ) {
           console.error( "Status: " + status );
+
+          balloon.bgcolor = "#d15";
+          balloon.header = "Update song tags failed";
+          balloon.text += "\nStatus: " + status
+          balloon.closable = true;
+
           return;
         }
+
+        balloon.header = "Song tags updated";
+        balloon.bgcolor = "#1b4";
+        balloon.timeout = +new Date() + 1000;
 
         this.list();
       } );
@@ -477,13 +501,29 @@ export default {
         return;
       }
 
+      let balloon = this.$refs.balloon.addBalloon( {
+        header: "Removing song...",
+        text: file.path,
+        closable: false
+      } );
+
       post( "./remove", {
         path: file.path
       }, ( status, res ) => {
         if ( status !== 200 ) {
           console.error( "Status: " + status );
+
+          balloon.bgcolor = "#d15";
+          balloon.header = "Remove song failed";
+          balloon.text += "\nStatus: " + status
+          balloon.closable = true;
+
           return;
         }
+
+        balloon.header = "Song removed";
+        balloon.bgcolor = "#1b4";
+        balloon.timeout = +new Date() + 1000;
 
         this.list();
       } );
@@ -505,9 +545,18 @@ export default {
       let search = this.searchValue;
       url += "&search=" + search;
 
+      let balloon = this.$refs.balloon.addBalloon( {
+        header: "Retrieving song list...",
+        text: search + " [" + sort + "]",
+        closable: false
+      } );
+
       get( url, ( status, res ) => {
         if ( status !== 200 ) {
-          console.error( "Status: " + status );
+          balloon.bgcolor = "#d15";
+          balloon.header = "Retrieve song list failed";
+          balloon.text += "\nStatus: " + status
+          balloon.closable = true;
           return;
         }
 
@@ -517,6 +566,8 @@ export default {
         ) {
           this.files = JSON.parse( res );
         }
+
+        balloon.closetime = +new Date();
       } );
     },
 
@@ -618,20 +669,54 @@ export default {
 
     onDrop( event ) {
       let files = event.dataTransfer.files;
-      for ( let iFile = 0; iFile < files.length; iFile ++ ) {
-        let file = files[ iFile ];
+      let index = -1;
+
+      let balloonCue;
+      if ( 1 < files.length ) {
+        balloonCue = this.$refs.balloon.addBalloon( {
+          header: "Upload cue: " + files.length,
+          closable: false
+        } );
+      }
+
+      let go = () => {
+        index ++;
+        if ( files.length === index ) {
+          if ( balloonCue ) { balloonCue.closetime = +new Date(); }
+          this.list();
+          return;
+        }
+
+        let file = files[ index ];
+
+        let balloon = this.$refs.balloon.addBalloon( {
+          header: "Uploading...",
+          text: file.name,
+          closable: false
+        } );
 
         post( "./add", {
           file: file
         }, ( status, res ) => {
+          balloon.closable = true;
+
           if ( status !== 200 ) {
-            console.error( "Status: " + status );
+            balloon.header = "Upload failed";
+            balloon.bgcolor = "#d15";
+            balloon.text += "\nStatus: " + status;
+            go();
             return;
           }
 
-          this.list();
+          balloon.header = "Uploaded!";
+          balloon.bgcolor = "#1b4";
+          balloon.timeout = +new Date() + 1000;
+
+          go();
         } );
-      }
+      };
+
+      go();
     },
 
     onCoverDragEnter() {
@@ -761,6 +846,7 @@ export default {
   },
 
   components: {
+    balloon,
     flicker,
     cover
   }

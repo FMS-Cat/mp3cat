@@ -7552,7 +7552,7 @@ exports.insert = function (css) {
 }
 
 },{}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/app.vue":[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 771, stdin */\n.app {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background: #222;\n  color: #ddd;\n  font: 400 12px/1.0 \"Helvetica Neue\", sans-serif; }\n  /* line 784, stdin */\n  .app .head {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 30px;\n    background: #eee; }\n    /* line 793, stdin */\n    .app .head .searchBox {\n      position: absolute;\n      width: calc( 30% - 16px);\n      height: 22px;\n      padding: 0 4px;\n      border: none;\n      left: 4px;\n      top: 4px;\n      border-radius: 4px;\n      background: #555;\n      color: #fff; }\n  /* line 809, stdin */\n  .app .foot {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: 60px;\n    color: #222;\n    background: #fafafa; }\n    /* line 818, stdin */\n    .app .foot .player {\n      position: absolute;\n      left: 60px;\n      width: calc( 100% - 70px);\n      bottom: 5px; }\n    /* line 825, stdin */\n    .app .foot .cover {\n      position: absolute;\n      left: 5px;\n      top: 5px;\n      width: 50px;\n      height: 50px;\n      background-size: cover;\n      background-color: #222; }\n    /* line 836, stdin */\n    .app .foot .button {\n      position: absolute;\n      top: 2px;\n      width: 24px;\n      height: 24px;\n      opacity: 0.72;\n      cursor: pointer; }\n      /* line 846, stdin */\n      .app .foot .button.prev {\n        left: 64px; }\n      /* line 850, stdin */\n      .app .foot .button.next {\n        left: 94px; }\n      /* line 854, stdin */\n      .app .foot .button.shuffle {\n        left: 124px; }\n        /* line 857, stdin */\n        .app .foot .button.shuffle.active {\n          opacity: 0.72; }\n        /* line 858, stdin */\n        .app .foot .button.shuffle:not(.active) {\n          opacity: 0.28; }\n    /* line 862, stdin */\n    .app .foot .info {\n      position: absolute;\n      left: 160px;\n      top: 7px; }\n  /* line 869, stdin */\n  .app .editor {\n    position: absolute;\n    left: calc( 50% - 150px);\n    top: 40px;\n    width: calc( 300px - 20px);\n    padding: 10px;\n    background: #ddd;\n    color: #222;\n    border-radius: 2px; }\n    /* line 880, stdin */\n    .app .editor .editorItem {\n      position: relative;\n      width: 100%;\n      height: 20px; }\n      /* line 885, stdin */\n      .app .editor .editorItem.comment {\n        height: 50px; }\n      /* line 889, stdin */\n      .app .editor .editorItem.cover {\n        height: 80px; }\n      /* line 893, stdin */\n      .app .editor .editorItem.buttons {\n        text-align: center; }\n      /* line 898, stdin */\n      .app .editor .editorItem input:not(.button) {\n        position: absolute;\n        left: 90px;\n        border: none;\n        width: calc( 100% - 100px);\n        height: 14px;\n        padding: 0 5px;\n        margin-top: -1px;\n        border-radius: 2px;\n        background: #eee; }\n      /* line 911, stdin */\n      .app .editor .editorItem input.button {\n        position: relative;\n        width: 80px; }\n      /* line 917, stdin */\n      .app .editor .editorItem .editorComment {\n        display: inline-block;\n        position: absolute;\n        left: 90px;\n        width: calc( 100% - 100px);\n        padding: 0 5px;\n        height: 40px;\n        border: none;\n        resize: none;\n        border-radius: 2px;\n        background: #eee; }\n      /* line 931, stdin */\n      .app .editor .editorItem .editorCover {\n        display: inline-block;\n        position: absolute;\n        left: 90px;\n        width: 72px;\n        height: 72px;\n        background-size: cover;\n        background-color: #222; }\n  /* line 945, stdin */\n  .app .filelistHead {\n    position: absolute;\n    left: 0px;\n    top: 30px;\n    width: 100%;\n    height: 20px;\n    background: #444;\n    white-space: nowrap;\n    overflow: hidden; }\n    /* line 957, stdin */\n    .app .filelistHead .menuButton {\n      position: absolute;\n      left: 2px;\n      top: 2px;\n      width: 16px;\n      height: 16px;\n      background: #777;\n      border-radius: 2px;\n      cursor: pointer; }\n      /* line 969, stdin */\n      .app .filelistHead .menuButton:hover {\n        background: #789; }\n      /* line 973, stdin */\n      .app .filelistHead .menuButton:active {\n        background: #567; }\n    /* line 978, stdin */\n    .app .filelistHead .attrs {\n      position: absolute;\n      left: 70px;\n      height: 100%; }\n      /* line 983, stdin */\n      .app .filelistHead .attrs .attr {\n        position: relative;\n        display: inline-block;\n        height: 100%;\n        padding-right: 10px;\n        cursor: pointer; }\n        /* line 991, stdin */\n        .app .filelistHead .attrs .attr:hover {\n          background: #456; }\n        /* line 995, stdin */\n        .app .filelistHead .attrs .attr .name {\n          position: absolute;\n          width: calc( 100% - 10px);\n          top: 5px;\n          text-overflow: ellipsis;\n          overflow: hidden; }\n        /* line 1004, stdin */\n        .app .filelistHead .attrs .attr .resizer {\n          position: absolute;\n          right: 0;\n          top: 0;\n          width: 4px;\n          height: 100%;\n          cursor: col-resize; }\n          /* line 1013, stdin */\n          .app .filelistHead .attrs .attr .resizer:hover {\n            background: #678; }\n  /* line 1021, stdin */\n  .app .filelistMenu {\n    position: absolute;\n    left: 0px;\n    top: 50px;\n    width: 120px;\n    background: #eee;\n    color: #111; }\n    /* line 1030, stdin */\n    .app .filelistMenu .addBox {\n      width: calc( 100% - 16px);\n      height: 16px;\n      margin: 4px;\n      padding: 0 4px;\n      border: none;\n      border-radius: 4px;\n      background: #ccc;\n      color: #000; }\n    /* line 1042, stdin */\n    .app .filelistMenu .option {\n      margin: 2px;\n      padding: 2px;\n      cursor: pointer; }\n      /* line 1048, stdin */\n      .app .filelistMenu .option:hover {\n        background: #bcd; }\n      /* line 1052, stdin */\n      .app .filelistMenu .option:active {\n        background: #89a; }\n  /* line 1058, stdin */\n  .app .filelist {\n    position: absolute;\n    left: 0px;\n    top: 50px;\n    width: 100%;\n    height: calc( 100% - 110px);\n    overflow-x: hidden;\n    overflow-y: scroll; }\n    /* line 1068, stdin */\n    .app .filelist .filelistInside .file {\n      position: relative;\n      padding: 2px;\n      height: 16px;\n      white-space: nowrap;\n      background: #222;\n      cursor: pointer; }\n      /* line 1078, stdin */\n      .app .filelist .filelistInside .file.odd {\n        background: #2b2b2b; }\n      /* line 1082, stdin */\n      .app .filelist .filelistInside .file:hover {\n        background: #345; }\n      /* line 1086, stdin */\n      .app .filelist .filelistInside .file .cover {\n        position: absolute;\n        left: 2px;\n        top: 2px;\n        width: 60px;\n        height: 100%;\n        overflow: hidden;\n        margin: -2px 10px -2px -2px;\n        background-size: cover;\n        background-color: #222; }\n      /* line 1099, stdin */\n      .app .filelist .filelistInside .file .attrs {\n        position: absolute;\n        left: 70px; }\n        /* line 1103, stdin */\n        .app .filelist .filelistInside .file .attrs .attr {\n          display: inline-block;\n          text-overflow: ellipsis;\n          overflow: hidden;\n          padding-bottom: 2px;\n          margin-top: 2px;\n          margin-right: 10px; }")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 857, stdin */\n.app {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background: #222;\n  color: #ddd;\n  font: 400 12px/1.0 \"Helvetica Neue\", sans-serif; }\n  /* line 870, stdin */\n  .app .head {\n    position: absolute;\n    left: 0;\n    top: 0;\n    width: 100%;\n    height: 30px;\n    background: #eee; }\n    /* line 879, stdin */\n    .app .head .searchBox {\n      position: absolute;\n      width: calc( 30% - 16px);\n      height: 22px;\n      padding: 0 4px;\n      border: none;\n      left: 4px;\n      top: 4px;\n      border-radius: 4px;\n      background: #555;\n      color: #fff; }\n  /* line 895, stdin */\n  .app .foot {\n    position: absolute;\n    left: 0;\n    bottom: 0;\n    width: 100%;\n    height: 60px;\n    color: #222;\n    background: #fafafa; }\n    /* line 904, stdin */\n    .app .foot .player {\n      position: absolute;\n      left: 60px;\n      width: calc( 100% - 70px);\n      bottom: 5px; }\n    /* line 911, stdin */\n    .app .foot .cover {\n      position: absolute;\n      left: 5px;\n      top: 5px;\n      width: 50px;\n      height: 50px;\n      background-size: cover;\n      background-color: #222; }\n    /* line 922, stdin */\n    .app .foot .button {\n      position: absolute;\n      top: 2px;\n      width: 24px;\n      height: 24px;\n      opacity: 0.72;\n      cursor: pointer; }\n      /* line 932, stdin */\n      .app .foot .button.prev {\n        left: 64px; }\n      /* line 936, stdin */\n      .app .foot .button.next {\n        left: 94px; }\n      /* line 940, stdin */\n      .app .foot .button.shuffle {\n        left: 124px; }\n        /* line 943, stdin */\n        .app .foot .button.shuffle.active {\n          opacity: 0.72; }\n        /* line 944, stdin */\n        .app .foot .button.shuffle:not(.active) {\n          opacity: 0.28; }\n    /* line 948, stdin */\n    .app .foot .info {\n      position: absolute;\n      left: 160px;\n      top: 7px; }\n  /* line 955, stdin */\n  .app .editor {\n    position: absolute;\n    left: calc( 50% - 150px);\n    top: 40px;\n    width: calc( 300px - 20px);\n    padding: 10px;\n    background: #ddd;\n    color: #222;\n    border-radius: 2px; }\n    /* line 966, stdin */\n    .app .editor .editorItem {\n      position: relative;\n      width: 100%;\n      height: 20px; }\n      /* line 971, stdin */\n      .app .editor .editorItem.comment {\n        height: 50px; }\n      /* line 975, stdin */\n      .app .editor .editorItem.cover {\n        height: 80px; }\n      /* line 979, stdin */\n      .app .editor .editorItem.buttons {\n        text-align: center; }\n      /* line 984, stdin */\n      .app .editor .editorItem input:not(.button) {\n        position: absolute;\n        left: 90px;\n        border: none;\n        width: calc( 100% - 100px);\n        height: 14px;\n        padding: 0 5px;\n        margin-top: -1px;\n        border-radius: 2px;\n        background: #eee; }\n      /* line 997, stdin */\n      .app .editor .editorItem input.button {\n        position: relative;\n        width: 80px; }\n      /* line 1003, stdin */\n      .app .editor .editorItem .editorComment {\n        display: inline-block;\n        position: absolute;\n        left: 90px;\n        width: calc( 100% - 100px);\n        padding: 0 5px;\n        height: 40px;\n        border: none;\n        resize: none;\n        border-radius: 2px;\n        background: #eee; }\n      /* line 1017, stdin */\n      .app .editor .editorItem .editorCover {\n        display: inline-block;\n        position: absolute;\n        left: 90px;\n        width: 72px;\n        height: 72px;\n        background-size: cover;\n        background-color: #222; }\n  /* line 1031, stdin */\n  .app .filelistHead {\n    position: absolute;\n    left: 0px;\n    top: 30px;\n    width: 100%;\n    height: 20px;\n    background: #444;\n    white-space: nowrap;\n    overflow: hidden; }\n    /* line 1043, stdin */\n    .app .filelistHead .menuButton {\n      position: absolute;\n      left: 2px;\n      top: 2px;\n      width: 16px;\n      height: 16px;\n      background: #777;\n      border-radius: 2px;\n      cursor: pointer; }\n      /* line 1055, stdin */\n      .app .filelistHead .menuButton:hover {\n        background: #789; }\n      /* line 1059, stdin */\n      .app .filelistHead .menuButton:active {\n        background: #567; }\n    /* line 1064, stdin */\n    .app .filelistHead .attrs {\n      position: absolute;\n      left: 70px;\n      height: 100%; }\n      /* line 1069, stdin */\n      .app .filelistHead .attrs .attr {\n        position: relative;\n        display: inline-block;\n        height: 100%;\n        padding-right: 10px;\n        cursor: pointer; }\n        /* line 1077, stdin */\n        .app .filelistHead .attrs .attr:hover {\n          background: #456; }\n        /* line 1081, stdin */\n        .app .filelistHead .attrs .attr .name {\n          position: absolute;\n          width: calc( 100% - 10px);\n          top: 5px;\n          text-overflow: ellipsis;\n          overflow: hidden; }\n        /* line 1090, stdin */\n        .app .filelistHead .attrs .attr .resizer {\n          position: absolute;\n          right: 0;\n          top: 0;\n          width: 4px;\n          height: 100%;\n          cursor: col-resize; }\n          /* line 1099, stdin */\n          .app .filelistHead .attrs .attr .resizer:hover {\n            background: #678; }\n  /* line 1107, stdin */\n  .app .filelistMenu {\n    position: absolute;\n    left: 0px;\n    top: 50px;\n    width: 120px;\n    background: #eee;\n    color: #111; }\n    /* line 1116, stdin */\n    .app .filelistMenu .addBox {\n      width: calc( 100% - 16px);\n      height: 16px;\n      margin: 4px;\n      padding: 0 4px;\n      border: none;\n      border-radius: 4px;\n      background: #ccc;\n      color: #000; }\n    /* line 1128, stdin */\n    .app .filelistMenu .option {\n      margin: 2px;\n      padding: 2px;\n      cursor: pointer; }\n      /* line 1134, stdin */\n      .app .filelistMenu .option:hover {\n        background: #bcd; }\n      /* line 1138, stdin */\n      .app .filelistMenu .option:active {\n        background: #89a; }\n  /* line 1144, stdin */\n  .app .filelist {\n    position: absolute;\n    left: 0px;\n    top: 50px;\n    width: 100%;\n    height: calc( 100% - 110px);\n    overflow-x: hidden;\n    overflow-y: scroll; }\n    /* line 1154, stdin */\n    .app .filelist .filelistInside .file {\n      position: relative;\n      padding: 2px;\n      height: 16px;\n      white-space: nowrap;\n      background: #222;\n      cursor: pointer; }\n      /* line 1164, stdin */\n      .app .filelist .filelistInside .file.odd {\n        background: #2b2b2b; }\n      /* line 1168, stdin */\n      .app .filelist .filelistInside .file:hover {\n        background: #345; }\n      /* line 1172, stdin */\n      .app .filelist .filelistInside .file .cover {\n        position: absolute;\n        left: 2px;\n        top: 2px;\n        width: 60px;\n        height: 100%;\n        overflow: hidden;\n        margin: -2px 10px -2px -2px;\n        background-size: cover;\n        background-color: #222; }\n      /* line 1185, stdin */\n      .app .filelist .filelistInside .file .attrs {\n        position: absolute;\n        left: 70px; }\n        /* line 1189, stdin */\n        .app .filelist .filelistInside .file .attrs .attr {\n          display: inline-block;\n          text-overflow: ellipsis;\n          overflow: hidden;\n          padding-bottom: 2px;\n          margin-top: 2px;\n          margin-right: 10px; }")
 ;(function(){
 "use strict";
 
@@ -7571,6 +7571,10 @@ var _stringify2 = _interopRequireDefault(_stringify);
 var _tap = require("./tap.js");
 
 var _tap2 = _interopRequireDefault(_tap);
+
+var _balloon = require("./balloon.vue");
+
+var _balloon2 = _interopRequireDefault(_balloon);
 
 var _flicker = require("./flicker.vue");
 
@@ -7847,6 +7851,11 @@ exports.default = {
 
       this.editing = false;
 
+      var balloon = this.$refs.balloon.addBalloon({
+        header: "Updating song tags...",
+        closable: false
+      });
+
       post("./update", {
         image: this.editingCover,
         json: (0, _stringify2.default)(this.editingFile),
@@ -7854,8 +7863,18 @@ exports.default = {
       }, function (status, res) {
         if (status !== 200) {
           console.error("Status: " + status);
+
+          balloon.bgcolor = "#d15";
+          balloon.header = "Update song tags failed";
+          balloon.text += "\nStatus: " + status;
+          balloon.closable = true;
+
           return;
         }
+
+        balloon.header = "Song tags updated";
+        balloon.bgcolor = "#1b4";
+        balloon.timeout = +new Date() + 1000;
 
         _this3.list();
       });
@@ -7870,13 +7889,29 @@ exports.default = {
         return;
       }
 
+      var balloon = this.$refs.balloon.addBalloon({
+        header: "Removing song...",
+        text: file.path,
+        closable: false
+      });
+
       post("./remove", {
         path: file.path
       }, function (status, res) {
         if (status !== 200) {
           console.error("Status: " + status);
+
+          balloon.bgcolor = "#d15";
+          balloon.header = "Remove song failed";
+          balloon.text += "\nStatus: " + status;
+          balloon.closable = true;
+
           return;
         }
+
+        balloon.header = "Song removed";
+        balloon.bgcolor = "#1b4";
+        balloon.timeout = +new Date() + 1000;
 
         _this4.list();
       });
@@ -7898,15 +7933,26 @@ exports.default = {
       var search = this.searchValue;
       url += "&search=" + search;
 
+      var balloon = this.$refs.balloon.addBalloon({
+        header: "Retrieving song list...",
+        text: search + " [" + sort + "]",
+        closable: false
+      });
+
       get(url, function (status, res) {
         if (status !== 200) {
-          console.error("Status: " + status);
+          balloon.bgcolor = "#d15";
+          balloon.header = "Retrieve song list failed";
+          balloon.text += "\nStatus: " + status;
+          balloon.closable = true;
           return;
         }
 
         if (sort === _this5.sortValue && search === _this5.searchValue) {
           _this5.files = JSON.parse(res);
         }
+
+        balloon.closetime = +new Date();
       });
     },
     onSearchBoxInput: function onSearchBoxInput() {
@@ -8013,20 +8059,56 @@ exports.default = {
       var _this8 = this;
 
       var files = event.dataTransfer.files;
-      for (var iFile = 0; iFile < files.length; iFile++) {
-        var file = files[iFile];
+      var index = -1;
+
+      var balloonCue = void 0;
+      if (1 < files.length) {
+        balloonCue = this.$refs.balloon.addBalloon({
+          header: "Upload cue: " + files.length,
+          closable: false
+        });
+      }
+
+      var go = function go() {
+        index++;
+        if (files.length === index) {
+          if (balloonCue) {
+            balloonCue.closetime = +new Date();
+          }
+          _this8.list();
+          return;
+        }
+
+        var file = files[index];
+
+        var balloon = _this8.$refs.balloon.addBalloon({
+          header: "Uploading...",
+          text: file.name,
+          closable: false
+        });
 
         post("./add", {
           file: file
         }, function (status, res) {
+          balloon.closable = true;
+
           if (status !== 200) {
-            console.error("Status: " + status);
+            balloon.header = "Upload failed";
+            balloon.bgcolor = "#d15";
+            balloon.text += "\nStatus: " + status;
+            go();
             return;
           }
 
-          _this8.list();
+          balloon.header = "Uploaded!";
+          balloon.bgcolor = "#1b4";
+          balloon.timeout = +new Date() + 1000;
+
+          go();
         });
-      }
+      };
+
+      go();
     },
     onCoverDragEnter: function onCoverDragEnter() {},
     onCoverDragLeave: function onCoverDragLeave() {},
@@ -8144,6 +8226,7 @@ exports.default = {
   },
 
   components: {
+    balloon: _balloon2.default,
     flicker: _flicker2.default,
     cover: _cover2.default
   }
@@ -8152,7 +8235,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app",on:{"dragenter":function($event){$event.stopPropagation();$event.preventDefault();_vm.onDragEnter($event)},"dragover":function($event){$event.stopPropagation();$event.preventDefault();},"dragleave":function($event){$event.stopPropagation();$event.preventDefault();_vm.onDragLeave($event)},"drop":function($event){$event.stopPropagation();$event.preventDefault();_vm.onDrop($event)}}},[_c('div',{staticClass:"head"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchValue),expression:"searchValue"}],staticClass:"searchBox",domProps:{"value":(_vm.searchValue)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.searchValue=$event.target.value},_vm.onSearchBoxInput],"keydown":function($event){$event.stopPropagation();}}})]),_vm._v(" "),_c('div',{staticClass:"foot"},[_c('audio',{ref:"player",staticClass:"player",attrs:{"src":_vm.playingFile && _vm.playingFile.path ? './stream/' + _vm.playingFile.path : '',"controls":""},on:{"ended":_vm.playerEnded,"canplay":_vm.playerCanPlay}}),_vm._v(" "),(_vm.playingFile !== null)?[_c('cover',{staticClass:"cover",attrs:{"src":'cover/' + _vm.playingFile.path}}),_vm._v(" "),_c('img',{staticClass:"button prev",attrs:{"src":"images/prev.svg"},on:{"click":function($event){_vm.playNext( -1 )}}}),_vm._v(" "),_c('img',{staticClass:"button next",attrs:{"src":"images/next.svg"},on:{"click":function($event){_vm.playNext( 1 )}}}),_vm._v(" "),_c('img',{staticClass:"button shuffle",class:{ active: _vm.playlist.random },attrs:{"src":"images/shuffle.svg"},on:{"click":function($event){_vm.playlist.random = !_vm.playlist.random}}}),_vm._v(" "),_c('div',{staticClass:"info"},[_vm._v("\n        "+_vm._s(_vm.playingFile.artist)+" - "+_vm._s(_vm.playingFile.title)+"\n      ")])]:_vm._e()],2),_vm._v(" "),_c('div',{staticClass:"filelist"},[_c('div',{staticClass:"filelistInside"},_vm._l((_vm.files),function(file,index){return _c('div',{staticClass:"file",class:{ odd: index % 2 === 1 },on:{"mousedown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"left",37)){ return null; }if('button' in $event && $event.button !== 0){ return null; }_vm.flickerMusic( file, index )}}},[_c('cover',{staticClass:"cover",attrs:{"src":'thumb/' + file.thumb}}),_vm._v(" "),_c('div',{staticClass:"attrs"},_vm._l((_vm.filelistAttrs),function(attr){return _c('div',{staticClass:"attr",style:({ width: ( attr.width - 10 ) + 'px' })},[_vm._v(_vm._s(file[ attr.field ] || ( file.json ? file.json[ attr.field ] : null )))])}))],1)}))]),_vm._v(" "),_c('div',{staticClass:"filelistHead"},[_c('img',{staticClass:"menuButton",attrs:{"src":"images/attrmenu.svg"},on:{"click":function($event){_vm.filelistMenu.show = !_vm.filelistMenu.show}}}),_vm._v(" "),_c('div',{staticClass:"attrs"},_vm._l((_vm.filelistAttrs),function(attr){return _c('div',{staticClass:"attr",style:({ width: ( attr.width - 10 ) + 'px' }),on:{"mousedown":function($event){$event.stopPropagation();_vm.grabFilelistAttr( attr )}}},[_c('div',{staticClass:"name"},[_vm._v(_vm._s(attr.field))]),_vm._v(" "),_c('div',{staticClass:"resizer",on:{"mousedown":function($event){$event.stopPropagation();_vm.grabFilelistResizer( attr )}}})])}))]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.filelistMenu.show),expression:"filelistMenu.show"}],staticClass:"filelistMenu"},[_c('input',{staticClass:"addBox",attrs:{"placeholder":"Add..."},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13)){ return null; }_vm.addFilelistAttr($event)}}}),_vm._v(" "),_vm._l((_vm.filelistAttrs),function(attr){return _c('div',{staticClass:"option",on:{"click":function($event){_vm.removeFilelistAttr( attr )}}},[_vm._v(_vm._s(attr.field))])})],2),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.editing),expression:"editing"}],staticClass:"editor"},[(_vm.editingFile)?[_c('div',{staticClass:"editorItem"},[_vm._v("\n        Artist "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.artist),expression:"editingFile.artist"}],domProps:{"value":(_vm.editingFile.artist)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.artist=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Title "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.title),expression:"editingFile.title"}],domProps:{"value":(_vm.editingFile.title)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.title=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Track No. "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.track),expression:"editingFile.track"}],staticClass:"num",domProps:{"value":(_vm.editingFile.track)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.track=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Disc No. "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.disc),expression:"editingFile.disc"}],staticClass:"num",domProps:{"value":(_vm.editingFile.disc)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.disc=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        BPM "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.bpm),expression:"editingFile.bpm"}],staticClass:"num",domProps:{"value":(_vm.editingFile.bpm)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDownBPM($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.bpm=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem comment"},[_vm._v("\n        Comment "),_c('textarea',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.comment),expression:"editingFile.comment"}],staticClass:"editorComment",domProps:{"value":(_vm.editingFile.comment)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.comment=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Album "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.album),expression:"editingFile.album"}],domProps:{"value":(_vm.editingFile.album)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.album=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Album Artist "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.albumartist),expression:"editingFile.albumartist"}],domProps:{"value":(_vm.editingFile.albumartist)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.albumartist=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Composer "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.composer),expression:"editingFile.composer"}],domProps:{"value":(_vm.editingFile.composer)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.composer=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Year "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.year),expression:"editingFile.year"}],staticClass:"num",domProps:{"value":(_vm.editingFile.year)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.year=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem cover"},[_vm._v("\n        Cover "),_c('div',{staticClass:"editorCover",on:{"dragenter":function($event){$event.stopPropagation();$event.preventDefault();_vm.onCoverDragEnter($event)},"dragover":function($event){$event.stopPropagation();$event.preventDefault();},"dragleave":function($event){$event.stopPropagation();$event.preventDefault();_vm.onCoverDragLeave($event)},"drop":function($event){$event.stopPropagation();$event.preventDefault();_vm.onCoverDrop($event)}}},[_c('cover',{attrs:{"src":_vm.editingCoverURL}})],1)]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Bulk update "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingBulk),expression:"editingBulk"}],attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.editingBulk)?_vm._i(_vm.editingBulk,null)>-1:(_vm.editingBulk)},on:{"change":_vm.toggleBulk,"__c":function($event){var $$a=_vm.editingBulk,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$c){$$i<0&&(_vm.editingBulk=$$a.concat($$v))}else{$$i>-1&&(_vm.editingBulk=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.editingBulk=$$c}}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem buttons"},[_c('input',{staticClass:"button",attrs:{"type":"button","value":"OK"},on:{"click":_vm.editFileOK}}),_vm._v(" "),_c('input',{staticClass:"button",attrs:{"type":"button","value":"Cancel"},on:{"click":_vm.editFileCancel}})])]:_vm._e()],2),_vm._v(" "),_c('flicker',{attrs:{"active":_vm.flicker.active,"imageSrcCenter":_vm.flicker.image.center,"imageSrcLeft":_vm.flicker.image.left,"imageSrcRight":_vm.flicker.image.right,"imageSrcUp":_vm.flicker.image.up,"imageSrcDown":_vm.flicker.image.down,"onCenter":_vm.flicker.func.center,"onLeft":_vm.flicker.func.left,"onRight":_vm.flicker.func.right,"onUp":_vm.flicker.func.up,"onDown":_vm.flicker.func.down},on:{"done":_vm.flickerDone}})],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"app",on:{"dragenter":function($event){$event.stopPropagation();$event.preventDefault();_vm.onDragEnter($event)},"dragover":function($event){$event.stopPropagation();$event.preventDefault();},"dragleave":function($event){$event.stopPropagation();$event.preventDefault();_vm.onDragLeave($event)},"drop":function($event){$event.stopPropagation();$event.preventDefault();_vm.onDrop($event)}}},[_c('div',{staticClass:"head"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.searchValue),expression:"searchValue"}],staticClass:"searchBox",domProps:{"value":(_vm.searchValue)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.searchValue=$event.target.value},_vm.onSearchBoxInput],"keydown":function($event){$event.stopPropagation();}}})]),_vm._v(" "),_c('div',{staticClass:"foot"},[_c('audio',{ref:"player",staticClass:"player",attrs:{"src":_vm.playingFile && _vm.playingFile.path ? './stream/' + _vm.playingFile.path : '',"controls":""},on:{"ended":_vm.playerEnded,"canplay":_vm.playerCanPlay}}),_vm._v(" "),(_vm.playingFile !== null)?[_c('cover',{staticClass:"cover",attrs:{"src":'cover/' + _vm.playingFile.path}}),_vm._v(" "),_c('img',{staticClass:"button prev",attrs:{"src":"images/prev.svg"},on:{"click":function($event){_vm.playNext( -1 )}}}),_vm._v(" "),_c('img',{staticClass:"button next",attrs:{"src":"images/next.svg"},on:{"click":function($event){_vm.playNext( 1 )}}}),_vm._v(" "),_c('img',{staticClass:"button shuffle",class:{ active: _vm.playlist.random },attrs:{"src":"images/shuffle.svg"},on:{"click":function($event){_vm.playlist.random = !_vm.playlist.random}}}),_vm._v(" "),_c('div',{staticClass:"info"},[_vm._v("\n        "+_vm._s(_vm.playingFile.artist)+" - "+_vm._s(_vm.playingFile.title)+"\n      ")])]:_vm._e()],2),_vm._v(" "),_c('div',{staticClass:"filelist"},[_c('div',{staticClass:"filelistInside"},_vm._l((_vm.files),function(file,index){return _c('div',{key:index,staticClass:"file",class:{ odd: index % 2 === 1 },on:{"mousedown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"left",37)){ return null; }if('button' in $event && $event.button !== 0){ return null; }_vm.flickerMusic( file, index )}}},[_c('cover',{staticClass:"cover",attrs:{"src":'thumb/' + file.thumb}}),_vm._v(" "),_c('div',{staticClass:"attrs"},_vm._l((_vm.filelistAttrs),function(attr,index){return _c('div',{key:index,staticClass:"attr",style:({ width: ( attr.width - 10 ) + 'px' })},[_vm._v(_vm._s(file[ attr.field ] || ( file.json ? file.json[ attr.field ] : null )))])}))],1)}))]),_vm._v(" "),_c('div',{staticClass:"filelistHead"},[_c('img',{staticClass:"menuButton",attrs:{"src":"images/attrmenu.svg"},on:{"click":function($event){_vm.filelistMenu.show = !_vm.filelistMenu.show}}}),_vm._v(" "),_c('div',{staticClass:"attrs"},_vm._l((_vm.filelistAttrs),function(attr,index){return _c('div',{key:index,staticClass:"attr",style:({ width: ( attr.width - 10 ) + 'px' }),on:{"mousedown":function($event){$event.stopPropagation();_vm.grabFilelistAttr( attr )}}},[_c('div',{staticClass:"name"},[_vm._v(_vm._s(attr.field))]),_vm._v(" "),_c('div',{staticClass:"resizer",on:{"mousedown":function($event){$event.stopPropagation();_vm.grabFilelistResizer( attr )}}})])}))]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.filelistMenu.show),expression:"filelistMenu.show"}],staticClass:"filelistMenu"},[_c('input',{staticClass:"addBox",attrs:{"placeholder":"Add..."},on:{"keydown":function($event){if(!('button' in $event)&&_vm._k($event.keyCode,"enter",13)){ return null; }_vm.addFilelistAttr($event)}}}),_vm._v(" "),_vm._l((_vm.filelistAttrs),function(attr,index){return _c('div',{key:index,staticClass:"option",on:{"click":function($event){_vm.removeFilelistAttr( attr )}}},[_vm._v(_vm._s(attr.field))])})],2),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.editing),expression:"editing"}],staticClass:"editor"},[(_vm.editingFile)?[_c('div',{staticClass:"editorItem"},[_vm._v("\n        Artist "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.artist),expression:"editingFile.artist"}],domProps:{"value":(_vm.editingFile.artist)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.artist=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Title "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.title),expression:"editingFile.title"}],domProps:{"value":(_vm.editingFile.title)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.title=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Track No. "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.track),expression:"editingFile.track"}],staticClass:"num",domProps:{"value":(_vm.editingFile.track)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.track=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Disc No. "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.disc),expression:"editingFile.disc"}],staticClass:"num",domProps:{"value":(_vm.editingFile.disc)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.disc=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        BPM "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.bpm),expression:"editingFile.bpm"}],staticClass:"num",domProps:{"value":(_vm.editingFile.bpm)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDownBPM($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.bpm=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem comment"},[_vm._v("\n        Comment "),_c('textarea',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.comment),expression:"editingFile.comment"}],staticClass:"editorComment",domProps:{"value":(_vm.editingFile.comment)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.comment=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Album "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.album),expression:"editingFile.album"}],domProps:{"value":(_vm.editingFile.album)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.album=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Album Artist "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.albumartist),expression:"editingFile.albumartist"}],domProps:{"value":(_vm.editingFile.albumartist)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.albumartist=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Composer "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.composer),expression:"editingFile.composer"}],domProps:{"value":(_vm.editingFile.composer)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.composer=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Year "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingFile.year),expression:"editingFile.year"}],staticClass:"num",domProps:{"value":(_vm.editingFile.year)},on:{"keydown":function($event){$event.stopPropagation();_vm.onEditorKeyDown($event)},"input":function($event){if($event.target.composing){ return; }_vm.editingFile.year=$event.target.value}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem cover"},[_vm._v("\n        Cover "),_c('div',{staticClass:"editorCover",on:{"dragenter":function($event){$event.stopPropagation();$event.preventDefault();_vm.onCoverDragEnter($event)},"dragover":function($event){$event.stopPropagation();$event.preventDefault();},"dragleave":function($event){$event.stopPropagation();$event.preventDefault();_vm.onCoverDragLeave($event)},"drop":function($event){$event.stopPropagation();$event.preventDefault();_vm.onCoverDrop($event)}}},[_c('cover',{attrs:{"src":_vm.editingCoverURL}})],1)]),_vm._v(" "),_c('div',{staticClass:"editorItem"},[_vm._v("\n        Bulk update "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.editingBulk),expression:"editingBulk"}],attrs:{"type":"checkbox"},domProps:{"checked":Array.isArray(_vm.editingBulk)?_vm._i(_vm.editingBulk,null)>-1:(_vm.editingBulk)},on:{"change":_vm.toggleBulk,"__c":function($event){var $$a=_vm.editingBulk,$$el=$event.target,$$c=$$el.checked?(true):(false);if(Array.isArray($$a)){var $$v=null,$$i=_vm._i($$a,$$v);if($$c){$$i<0&&(_vm.editingBulk=$$a.concat($$v))}else{$$i>-1&&(_vm.editingBulk=$$a.slice(0,$$i).concat($$a.slice($$i+1)))}}else{_vm.editingBulk=$$c}}}})]),_vm._v(" "),_c('div',{staticClass:"editorItem buttons"},[_c('input',{staticClass:"button",attrs:{"type":"button","value":"OK"},on:{"click":_vm.editFileOK}}),_vm._v(" "),_c('input',{staticClass:"button",attrs:{"type":"button","value":"Cancel"},on:{"click":_vm.editFileCancel}})])]:_vm._e()],2),_vm._v(" "),_c('balloon',{ref:"balloon"}),_vm._v(" "),_c('flicker',{attrs:{"active":_vm.flicker.active,"imageSrcCenter":_vm.flicker.image.center,"imageSrcLeft":_vm.flicker.image.left,"imageSrcRight":_vm.flicker.image.right,"imageSrcUp":_vm.flicker.image.up,"imageSrcDown":_vm.flicker.image.down,"onCenter":_vm.flicker.func.center,"onLeft":_vm.flicker.func.left,"onRight":_vm.flicker.func.right,"onUp":_vm.flicker.func.up,"onDown":_vm.flicker.func.down},on:{"done":_vm.flickerDone}})],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -8165,7 +8248,130 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-1fa650a7", __vue__options__)
   }
 })()}
-},{"./cover.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/cover.vue","./flicker.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/flicker.vue","./tap.js":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/tap.js","babel-runtime/core-js/json/stringify":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/babel-runtime/core-js/json/stringify.js","babel-runtime/core-js/object/assign":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/babel-runtime/core-js/object/assign.js","vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue/dist/vue.runtime.common.js","vue-hot-reload-api":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue-hot-reload-api/index.js","vueify/lib/insert-css":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vueify/lib/insert-css.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/cover.vue":[function(require,module,exports){
+},{"./balloon.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/balloon.vue","./cover.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/cover.vue","./flicker.vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/flicker.vue","./tap.js":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/tap.js","babel-runtime/core-js/json/stringify":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/babel-runtime/core-js/json/stringify.js","babel-runtime/core-js/object/assign":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/babel-runtime/core-js/object/assign.js","vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue/dist/vue.runtime.common.js","vue-hot-reload-api":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue-hot-reload-api/index.js","vueify/lib/insert-css":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vueify/lib/insert-css.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/balloon.vue":[function(require,module,exports){
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 111, stdin */\n.balloons {\n  position: absolute;\n  right: 8px;\n  top: 8px; }\n  /* line 116, stdin */\n  .balloons .balloon {\n    position: relative;\n    width: 240px;\n    padding: 8px;\n    margin-bottom: 8px;\n    border-radius: 4px;\n    cursor: pointer; }\n    /* line 127, stdin */\n    .balloons .balloon.opening {\n      animation-name: balloonStart;\n      animation-duration: 0.2s;\n      animation-timing-function: ease; }\n\n@keyframes balloonStart {\n  0% {\n    transform: scale(0.8);\n    opacity: 0.0; }\n  100% {\n    transform: scale(1);\n    opacity: 1.0; } }\n    /* line 145, stdin */\n    .balloons .balloon.closing {\n      opacity: 0.0;\n      animation-name: balloonEnd;\n      animation-duration: 0.2s;\n      animation-timing-function: ease; }\n\n@keyframes balloonEnd {\n  0% {\n    transform: translateX(0px);\n    opacity: 1.0; }\n  100% {\n    transform: translateX(10px);\n    opacity: 0.0; } }\n    /* line 165, stdin */\n    .balloons .balloon .header {\n      font-size: 1.3em;\n      font-weight: bold;\n      padding-bottom: 4px; }\n    /* line 171, stdin */\n    .balloons .balloon .text {\n      white-space: pre-wrap; }\n    /* line 175, stdin */\n    .balloons .balloon .timestring {\n      position: absolute;\n      right: 8px;\n      top: 8px;\n      font-size: 0.8em;\n      opacity: 0.6; }")
+;(function(){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+
+var def = function def(a, b) {
+  var ret = {};
+  for (var key in a) {
+    ret[key] = a[key];
+  }
+  for (var _key in b) {
+    ret[_key] = b[_key];
+  }
+  return ret;
+};
+
+exports.default = {
+  mounted: function mounted() {
+    var _this = this;
+
+    var update = function update() {
+      _this.update();
+      setTimeout(update, 100);
+    };
+    update();
+  },
+  beforeDestroy: function beforeDestroy() {},
+  data: function data() {
+    return {
+      balloons: []
+    };
+  },
+
+
+  methods: {
+    addBalloon: function addBalloon(params, time) {
+      var p = def({
+        date: +new Date(),
+        timestring: "Just now",
+        header: "",
+        text: "",
+        bgcolor: "#456",
+        fgcolor: "#fff",
+        timeout: time ? +new Date() + time : null,
+        closable: true,
+        closetime: false
+      }, params);
+
+      this.balloons.unshift(p);
+      return p;
+    },
+    timeformat: function timeformat(date) {
+      var now = new Date();
+      var delta = now - date;
+
+      if (delta < 1000.0) {
+        return "Just now";
+      } else if (delta < 60000.0) {
+        return Math.floor(delta / 1000.0) + "s";
+      } else if (delta < 3600000.0) {
+        return Math.floor(delta / 60000.0) + "min";
+      } else {
+        return now.toLocaleTimeString();
+      }
+    },
+    onclick: function onclick(index) {
+      var balloon = this.balloons[index];
+
+      if (balloon.onclick && typeof balloon.onclick === "function") {
+        balloon.onclick();
+      }
+
+      if (balloon.closable) {
+        balloon.closetime = +new Date();
+      }
+    },
+    update: function update() {
+      for (var i = 0; i < this.balloons.length; i++) {
+        var balloon = this.balloons[i];
+
+        balloon.timestring = this.timeformat(balloon.date);
+
+        var now = +new Date();
+        if (!balloon.closetime && balloon.timeout && balloon.timeout < now) {
+          balloon.closetime = now;
+        }
+
+        if (balloon.closetime && balloon.closetime < now - 200) {
+          this.balloons.splice(i, 1);
+          i--;
+        }
+      }
+    }
+  }
+};
+})()
+if (module.exports.__esModule) module.exports = module.exports.default
+var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
+if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"balloons"},_vm._l((_vm.balloons),function(balloon,index){return _c('div',{key:index,staticClass:"balloon",class:{
+      opening: +new Date() - balloon.date < 1000,
+      closing: ~~( balloon.closetime )
+    },style:({
+      background: balloon.bgcolor,
+      color: balloon.fgcolor
+    }),on:{"click":function($event){_vm.onclick( index )}}},[_c('div',{staticClass:"header"},[_vm._v(_vm._s(balloon.header))]),_vm._v(" "),_c('div',{staticClass:"text"},[_vm._v(_vm._s(balloon.text))]),_vm._v(" "),_c('div',{staticClass:"timestring"},[_vm._v(_vm._s(balloon.timestring))])])}))}
+__vue__options__.staticRenderFns = []
+if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), true)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  module.hot.dispose(__vueify_style_dispose__)
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-256aa696", __vue__options__)
+  } else {
+    hotAPI.rerender("data-v-256aa696", __vue__options__)
+  }
+})()}
+},{"vue":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue/dist/vue.runtime.common.js","vue-hot-reload-api":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vue-hot-reload-api/index.js","vueify/lib/insert-css":"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/node_modules/vueify/lib/insert-css.js"}],"/Users/Yutaka/Dropbox/pro/JavaScript/_nodejs/mp3cat/src/cover.vue":[function(require,module,exports){
 var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert("/* line 22, stdin */\n.cover-cover {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  background-size: cover;\n  background-color: #222; }")
 ;(function(){
 "use strict";
