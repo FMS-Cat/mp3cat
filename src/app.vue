@@ -1,44 +1,44 @@
 <template>
 <div class="app"
-  v-on:dragenter.stop.prevent="onDragEnter"
-  v-on:dragover.stop.prevent
-  v-on:dragleave.stop.prevent="onDragLeave"
-  v-on:drop.stop.prevent="onDrop"
+  @dragenter.stop.prevent="onDragEnter"
+  @dragover.stop.prevent
+  @dragleave.stop.prevent="onDragLeave"
+  @drop.stop.prevent="onDrop"
 >
   <div class="head">
     <input class="searchBox"
       v-model="searchValue"
-      v-on:input="onSearchBoxInput"
-      v-on:keydown.stop
+      @input="onSearchBoxInput"
+      @keydown.stop
     />
   </div>
 
   <div class="foot">
     <audio class="player"
       ref="player"
-      v-bind:src="playingFile && playingFile.path ? './stream/' + playingFile.path : ''"
-      v-on:ended="playerEnded"
-      v-on:canplay="playerCanPlay"
+      :src="playingFile && playingFile.path ? './stream/' + playingFile.path : ''"
+      @ended="playerEnded"
+      @canplay="playerCanPlay"
       controls
     ></audio>
     <template
       v-if="playingFile !== null"
     >
       <cover class="cover"
-        v-bind:src="'cover/' + playingFile.path"
+        :src="'cover/' + playingFile.path"
       />
       <img class="button prev"
         src="images/prev.svg"
-        v-on:click="playNext( -1 )"
+        @click="playNext( -1 )"
       />
       <img class="button next"
         src="images/next.svg"
-        v-on:click="playNext( 1 )"
+        @click="playNext( 1 )"
       />
-      <img class="button shuffle"
-        src="images/shuffle.svg"
-        v-bind:class="{ active: playlist.random }"
-        v-on:click="playlist.random = !playlist.random"
+      <img class="button dice"
+        src="images/dice.svg"
+        :class="{ active: random }"
+        @click="random = !random"
       />
       <div class="info">
         {{ playingFile.artist }} - {{ playingFile.title }}
@@ -50,18 +50,18 @@
     <div class="filelistInside">
       <div class="file"
         v-for="( file, index ) in files"
-        v-bind:key="index"
-        v-bind:class="{ odd: index % 2 === 1 }"
-        v-on:mousedown.left="flickerMusic( file, index )"
+        :key="index"
+        :class="{ odd: index % 2 === 1 }"
+        @mousedown.left="flickerMusic( file, index )"
       >
         <cover class="cover"
-          v-bind:src="'thumb/' + file.thumb"
+          :src="'thumb/' + file.thumb"
         />
         <div class="attrs">
           <div class="attr"
             v-for="( attr, index ) in filelistAttrs"
-            v-bind:key="index"
-            v-bind:style="{ width: ( attr.width - 10 ) + 'px' }"
+            :key="index"
+            :style="{ width: ( attr.width - 10 ) + 'px' }"
           >{{ file[ attr.field ] || ( file.json ? file.json[ attr.field ] : null ) }}</div>
         </div>
       </div>
@@ -72,19 +72,19 @@
   >
     <img class="menuButton"
       src="images/attrmenu.svg"
-      v-on:click="filelistMenu.show = !filelistMenu.show"
+      @click="filelistMenu.show = !filelistMenu.show"
     />
     <div class="attrs"
     >
       <div class="attr"
         v-for="( attr, index ) in filelistAttrs"
-        v-bind:key="index"
-        v-bind:style="{ width: ( attr.width - 10 ) + 'px' }"
-        v-on:mousedown.stop="grabFilelistAttr( attr )"
+        :key="index"
+        :style="{ width: ( attr.width - 10 ) + 'px' }"
+        @mousedown.stop="grabFilelistAttr( attr )"
       >
         <div class="name">{{ attr.field }}</div>
         <div class="resizer"
-          v-on:mousedown.stop="grabFilelistResizer( attr )"
+          @mousedown.stop="grabFilelistResizer( attr )"
         ></div>
       </div>
     </div>
@@ -95,12 +95,12 @@
   >
     <input class="addBox"
       placeholder="Add..."
-      v-on:keydown.enter="addFilelistAttr"
+      @keydown.enter="addFilelistAttr"
     />
     <div class="option"
       v-for="( attr, index ) in filelistAttrs"
-      v-bind:key="index"
-      v-on:click="removeFilelistAttr( attr )"
+      :key="index"
+      @click="removeFilelistAttr( attr )"
     >{{ attr.field }}</div>
   </div>
 
@@ -111,54 +111,54 @@
       v-if="editingFile"
     >
       <div class="editorItem">
-        Artist <input v-model="editingFile.artist" v-on:keydown.stop="onEditorKeyDown" />
+        Artist <input v-model="editingFile.artist" @keydown.stop="onEditorKeyDown" />
       </div>
       <div class="editorItem">
-        Title <input v-model="editingFile.title" v-on:keydown.stop="onEditorKeyDown" />
+        Title <input v-model="editingFile.title" @keydown.stop="onEditorKeyDown" />
       </div>
       <div class="editorItem">
-        Track No. <input class="num" v-model="editingFile.track" v-on:keydown.stop="onEditorKeyDown" />
+        Track No. <input class="num" v-model="editingFile.track" @keydown.stop="onEditorKeyDown" />
       </div>
       <div class="editorItem">
-        Disc No. <input class="num" v-model="editingFile.disc" v-on:keydown.stop="onEditorKeyDown" />
+        Disc No. <input class="num" v-model="editingFile.disc" @keydown.stop="onEditorKeyDown" />
       </div>
       <div class="editorItem">
-        BPM <input class="num" v-model="editingFile.bpm" v-on:keydown.stop="onEditorKeyDownBPM" />
+        BPM <input class="num" v-model="editingFile.bpm" @keydown.stop="onEditorKeyDownBPM" />
       </div>
       <div class="editorItem comment">
-        Comment <textarea class="editorComment" v-model="editingFile.comment" v-on:keydown.stop="onEditorKeyDown" />
+        Comment <textarea class="editorComment" v-model="editingFile.comment" @keydown.stop="onEditorKeyDown" />
       </div>
       <div class="editorItem">
-        Album <input v-model="editingFile.album" v-on:keydown.stop="onEditorKeyDown" />
+        Album <input v-model="editingFile.album" @keydown.stop="onEditorKeyDown" />
       </div>
       <div class="editorItem">
-        Album Artist <input v-model="editingFile.albumartist" v-on:keydown.stop="onEditorKeyDown" />
+        Album Artist <input v-model="editingFile.albumartist" @keydown.stop="onEditorKeyDown" />
       </div>
       <div class="editorItem">
-        Composer <input v-model="editingFile.composer" v-on:keydown.stop="onEditorKeyDown" />
+        Composer <input v-model="editingFile.composer" @keydown.stop="onEditorKeyDown" />
       </div>
       <div class="editorItem">
-        Year <input class="num" v-model="editingFile.year" v-on:keydown.stop="onEditorKeyDown" />
+        Year <input class="num" v-model="editingFile.year" @keydown.stop="onEditorKeyDown" />
       </div>
       <div class="editorItem cover">
         Cover <div class="editorCover"
-          v-on:dragenter.stop.prevent="onCoverDragEnter"
-          v-on:dragover.stop.prevent
-          v-on:dragleave.stop.prevent="onCoverDragLeave"
-          v-on:drop.stop.prevent="onCoverDrop"
+          @dragenter.stop.prevent="onCoverDragEnter"
+          @dragover.stop.prevent
+          @dragleave.stop.prevent="onCoverDragLeave"
+          @drop.stop.prevent="onCoverDrop"
         ><cover
-          v-bind:src="editingCoverURL"
+          :src="editingCoverURL"
         /></div>
       </div>
       <div class="editorItem">
-        Bulk update <input type="checkbox" v-model="editingBulk" v-on:change="toggleBulk" />
+        Bulk update <input type="checkbox" v-model="editingBulk" @change="toggleBulk" />
       </div>
       <div class="editorItem buttons">
         <input class="button" type="button" value="OK"
-          v-on:click="editFileOK"
+          @click="editFileOK"
         />
         <input class="button" type="button" value="Cancel"
-          v-on:click="editFileCancel"
+          @click="editFileCancel"
         />
       </div>
     </template>
@@ -169,18 +169,18 @@
   />
 
   <flicker
-    v-bind:active="flicker.active"
-    v-bind:imageSrcCenter="flicker.image.center"
-    v-bind:imageSrcLeft="flicker.image.left"
-    v-bind:imageSrcRight="flicker.image.right"
-    v-bind:imageSrcUp="flicker.image.up"
-    v-bind:imageSrcDown="flicker.image.down"
-    v-bind:onCenter="flicker.func.center"
-    v-bind:onLeft="flicker.func.left"
-    v-bind:onRight="flicker.func.right"
-    v-bind:onUp="flicker.func.up"
-    v-bind:onDown="flicker.func.down"
-    v-on:done="flickerDone"
+    :active="flicker.active"
+    :imageSrcCenter="flicker.image.center"
+    :imageSrcLeft="flicker.image.left"
+    :imageSrcRight="flicker.image.right"
+    :imageSrcUp="flicker.image.up"
+    :imageSrcDown="flicker.image.down"
+    :onCenter="flicker.func.center"
+    :onLeft="flicker.func.left"
+    :onRight="flicker.func.right"
+    :onUp="flicker.func.up"
+    :onDown="flicker.func.down"
+    @done="flickerDone"
   />
 </div>
 </template>
@@ -247,10 +247,10 @@ export default {
   data() {
     return {
       playingFile: null,
+      random: true,
       playlist: {
         search: "",
         sort: "artist,title,album",
-        random: false,
         current: 0,
         count: 0
       },
@@ -356,7 +356,6 @@ export default {
         search: this.searchValue,
         sort: this.sortValue,
         current: index,
-        random: true,
         count: 0
       };
       this.getPlaylistCount();
@@ -387,7 +386,7 @@ export default {
         dir += 1;
       }
 
-      if ( this.playlist.random && dir !== 0 ) {
+      if ( this.random && dir !== 0 ) {
         this.playlist.current = parseInt( Math.random() * this.playlist.count );
       } else {
         this.playlist.current += dir;
@@ -941,7 +940,7 @@ export default {
         left: $foot-height + 34px;
       }
 
-      &.shuffle {
+      &.dice {
         left: $foot-height + 64px;
 
         &.active { opacity: 0.72; }
