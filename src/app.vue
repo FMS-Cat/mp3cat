@@ -687,6 +687,10 @@ export default {
           return;
         }
 
+        if ( balloonCue ) {
+          balloonCue.header = "Upload cue: " + ( files.length - index );
+        }
+
         let file = files[ index ];
 
         let balloon = this.$refs.balloon.addBalloon( {

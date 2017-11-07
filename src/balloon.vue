@@ -60,7 +60,7 @@ export default {
         closetime: false
       }, params );
 
-      this.balloons.unshift( p );
+      this.balloons.push( p );
       return p;
     },
 
