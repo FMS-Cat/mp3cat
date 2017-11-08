@@ -16,6 +16,13 @@ let floatRangeRegexp = new RegExp( "(" + floatRegexpStr + ")-(" + floatRegexpStr
 let floatSinceRegexp = new RegExp( "(" + floatRegexpStr + ")-" );
 let floatUntilRegexp = new RegExp( "-(" + floatRegexpStr + ")" );
 
+let regexpRegexp = new RegExp( "\/(.*?[^\\\/])\/([gimy]*)" );
+let genRegexp = ( str ) => {
+  let m = str.match( regexpRegexp );
+  if ( m ) { return new RegExp( m[ 1 ], m[ 2 ] ); }
+  else { return new RegExp( str, "i" ); }
+};
+
 let numRangeCond = ( rangestr, exclude ) => {
   let rangeMatch = rangestr.match( floatRangeRegexp );
   if ( rangeMatch ) {
@@ -76,6 +83,12 @@ let queryParser = ( query ) => {
   } );
   query = query.replace( /\0/g, "\"" );
 
+  query = query.replace( /\\\//g, "\0" );
+  query = query.replace( /\/[^\/]*\//g, ( re ) => {
+    return re.replace( /\s/g, "\\ " );
+  } );
+  query = query.replace( /\0/g, "/" );
+
   query = query.replace( /\\\s/g, "\0" );
   let words = query.split( /\s+/ );
   words = words.map( ( word ) => {
@@ -118,7 +131,7 @@ let queryParser = ( query ) => {
         let field = strFields[ iField ];
         let match = word.match( strFieldsRegexp[ iField ] );
         if ( match ) {
-          cond[ field ] = new RegExp( match[ 1 ], "i" );
+          cond[ field ] = genRegexp( match[ 1 ], "i" );
           if ( exclude ) { cond[ field ] = { $not: cond[ field ] }; }
           cleared = true; break;
         }
@@ -128,7 +141,7 @@ let queryParser = ( query ) => {
     if ( !cleared ) {
       let match = word.match( jsonStrFieldsRegexp );
       if ( match ) {
-        let c = new RegExp( match[ 2 ], "i" );
+        let c = genRegexp( match[ 2 ], "i" );
         if ( exclude ) { c = { $not: c }; }
         cond[ "json." + match[ 1 ] ] = c;
         cleared = true;
@@ -145,7 +158,7 @@ let queryParser = ( query ) => {
         let any = [];
         strFields.map( ( field ) => {
           let o = {};
-          o[ field ] = new RegExp( word, "i" );
+          o[ field ] = genRegexp( word, "i" );
           if ( exclude ) { o[ field ] = { $not: o[ field ] }; }
           any.push( o );
         } );
@@ -160,7 +173,5 @@ let queryParser = ( query ) => {
   if ( out.$and.length === 0 ) { return null; }
   return out;
 };
-
-// console.log( JSON.stringify( queryParser( '-adfj "d fjk\\\"" title:a\\ nold year:2014-2016' ) ) );
 
 module.exports = queryParser;
