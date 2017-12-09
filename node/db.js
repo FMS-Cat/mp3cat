@@ -68,7 +68,6 @@ let scan = ( libPath, callback ) => {
             if ( error ) {
               console.error( error );
             } else {
-              coverImage = image;
               file.thumb = hash;
             }
             go();
@@ -243,27 +242,14 @@ let count = ( query, limit, skip, callback ) => {
 };
 
 let cover = ( libPath, file, coverPath, callback ) => {
-  let go = () => {
+  convert.png( coverPath, ( error ) => {
+    if ( error ) { callback( error ); return; }
     let image = fs.readFileSync( coverPath + ".png" );
-
     thumb.add( libPath, file.mp3Path, coverPath, ( error, hash ) => {
-      if ( error ) {
-        callback( error );
-        return;
-      }
-
+      if ( error ) { callback( error ); return; }
       callback( null, hash, image );
     } );
-  };
-
-  if ( fs.existsSync( coverPath + ".png" ) ) {
-    go();
-  } else {
-    convert.png( coverPath, ( error ) => {
-      if ( error ) { callback( error ); return; }
-      go();
-    } );
-  }
+  } );
 };
 
 let update = ( libPath, file, coverPath, bulk, callback ) => {
@@ -343,6 +329,7 @@ let update = ( libPath, file, coverPath, bulk, callback ) => {
 
   file = tagman.format( file );
 
+  let coverImage = null;
   let go = () => {
     coll.update(
       { path: oldpath },
@@ -359,7 +346,6 @@ let update = ( libPath, file, coverPath, bulk, callback ) => {
     );
   };
 
-  let coverImage = null;
   if ( coverPath ) {
     cover( libPath, file, coverPath, ( error, hash, image ) => {
       if ( error ) {
