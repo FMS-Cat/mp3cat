@@ -1,0 +1,48 @@
+BSStrategy = {
+  version: 1,
+  displayName: "MP3Cat",
+
+  accepts: {
+    method: "predicateOnTab",
+    format: "%K LIKE[c] '*[YOUR URL HERE]*'",
+    args: [ "URL" ]
+  },
+
+  isPlaying: function () {
+    return !document.querySelector( 'audio.player' ).paused;
+  },
+
+  toggle: function () {
+    document.querySelector( 'audio.player' ).paused ?
+    document.querySelector( 'audio.player' ).play() :
+    document.querySelector( 'audio.player' ).pause();
+  },
+
+  previous: function () {
+    document.querySelector( 'img.prev.button' ).click();
+  },
+
+  next: function () {
+    document.querySelector( 'img.next.button' ).click();
+  },
+
+  pause: function () {
+    document.querySelector( 'audio.player' ).pause();
+  },
+
+  trackInfo: function () {
+    let info = /(.*?) - (.*)/.exec( document.querySelector( 'div.info' ).innerText );
+
+    let ret = {
+      'track': info[ 2 ],
+      'artist': info[ 1 ]
+    };
+
+    let imageURL = /url\(\"(.*)\"\)/.exec( document.querySelector( 'div.cover.cover-cover' ).style.backgroundImage );
+    if ( imageURL ) {
+      ret.image = new URL( imageURL[ 1 ], location.href ).href
+    }
+
+    return ret;
+  }
+}
